@@ -167,8 +167,8 @@
 const fullItemsList = [
     { name: "33 Export", price: 5000, type: "local", barcode: "5407010260830", depotStock: 0, comptoirStock: 0 },
     { name: "Appy", price: 2000, type: "importe", barcode: "6009709821798", depotStock: 24, comptoirStock: 12 },
-    { name: "Autumn", price: 15000, type: "importe", barcode: "6001108036827", depotStock: 13, comptoirStock: 2 },
-    { name: "Beaufort", price: 3500, type: "local", barcode: "9501100003065", depotStock: 0, comptoirStock: 0 },
+    { name: "Autumn", price: 12000, type: "importe", barcode: "6001108036827", depotStock: 13, comptoirStock: 2 },
+    { name: "Beaufort", price: 5000, type: "local", barcode: "9501100003065", depotStock: 0, comptoirStock: 0 },
     { name: "Black Bencher (G)", price: 15000, type: "importe", barcode: "6900705990030", depotStock: 0, comptoirStock: 0 },
     { name: "Black Bencher (P)", price: 8000, type: "importe", barcode: "8906125990047", depotStock: 0, comptoirStock: 0 },
     { name: "Bony Brown", price: 20000, type: "importe", barcode: "35087024", depotStock: 0, comptoirStock: 0 },
@@ -243,18 +243,18 @@ const fullItemsList = [
 ];
 const defaultServers = [
     { name: "Sarive Woto", position: "Gérant", startDate: "2026-01-16", fixedSalary: 220000 },
-    { name: "Eva Mikato", position: "Gérant", startDate: "2026-01-04", fixedSalary: 220000 },
+    { name: "Stella", position: "Serveuse", startDate: "2026-05-04", fixedSalary: 140000 },
     { name: "Mimi Luboya", position: "Cuisinière", startDate: "2025-12-29", fixedSalary: 140000 },
     { name: "Maman Bébé", position: "Nettoyeuse", startDate: "2026-02-13", fixedSalary: 140000 },
     { name: "Admira Bakajika", position: "Réceptionniste", startDate: "2025-03-01", fixedSalary: 140000 },
-    { name: "Christelle Kam's", position: "Serveurse", startDate: "2025-03-01", fixedSalary: 140000 },
+    { name: "Christelle Kam's", position: "Serveuse", startDate: "2025-03-01", fixedSalary: 140000 },
     { name: "Ruth Ruthiana", position: "Serveuse", startDate: "2026-12-29", fixedSalary: 140000 },
     { name: "Darcia", position: "Serveuse", startDate: "2026-04-04", fixedSalary: 140000 },
     { name: "Sam Samsanga", position: "Barman", startDate: "2026-03-27", fixedSalary: 140000 }
 ];
 let items = [], salesHistory = [], servers = [], stockMovements = [], losses = [], expenses = [], debts = [], purchases = [], trackingData = { comptoir: {}, depot: {} };
 let settings = { localThreshold: 10, importeThreshold: 3, vipSurcharge1: 2000, vipSurcharge2: 5000, vipSurcharge3: 10000, workHoursPerDay: 8, workDaysPerMonth: 30, autoSave: true };
-let companyInfo = { name: "Mes Bes Extrêmes", slogan: "Bar & Terrasse", address: "123 Avenue Principale, Kinshasa", phone: "+243 123 456 789", email: "contact@mesbesextremes.cd", website: "www.mesbesextremes.cd", facebook: "@mesbesextremes", instagram: "@mesbesextremes", tiktok: "@mesbesextremes", logo: null, rccm: "RCCM-CD/KIN/123456", taxId: "IDNAT-123456789", registre: "RC-98765" };
+let companyInfo = { name: "Mes Bes Extrêmes", slogan: "Bar & Terrasse", address: "Route Kimpe Réf.OCC Whisky, Ville Kasumbalesa", phone: "+243 813 594 485", email: "contact@mesbesextremes.cd", website: "www.mesbesextremes.cd", facebook: "@mesbesextremes", instagram: "@mesbesextremes", tiktok: "@mesbesextremes", logo: null, rccm: "RCCM-CD/KIN/123456", taxId: "IDNAT-123456789", registre: "RC-98765" };
 let currentUser = null, userProfile = null;
 let carts = [[], [], [], [], [], [], [], [], [], []], currentCartIndex = 0, cartServers = ['', '', '', '', '', '', '', '', '', ''], cartDates = [];
 let pendingSale = null, currentReceiptSale = null;
