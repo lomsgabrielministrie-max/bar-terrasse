@@ -58,9 +58,6 @@
         body { font-family:'Inter','Segoe UI',system-ui,sans-serif; background:var(--bg); color:var(--text-primary); min-height:100vh; line-height:1.5; -webkit-font-smoothing:antialiased; transition:background 0.3s,color 0.3s; overflow-x:hidden; }
         ::-webkit-scrollbar { width:8px; height:8px; } ::-webkit-scrollbar-track { background:var(--bg); } ::-webkit-scrollbar-thumb { background:var(--card-border); border-radius:4px; }
         .fade-up { opacity:0; transform:translateY(40px); transition:all 0.9s cubic-bezier(0.2,0.9,0.3,1); } .fade-up.visible { opacity:1; transform:translateY(0); }
-        .fade-left { opacity:0; transform:translateX(-40px); transition:all 0.9s cubic-bezier(0.2,0.9,0.3,1); } .fade-left.visible { opacity:1; transform:translateX(0); }
-        .fade-right { opacity:0; transform:translateX(40px); transition:all 0.9s cubic-bezier(0.2,0.9,0.3,1); } .fade-right.visible { opacity:1; transform:translateX(0); }
-        .scale-in { opacity:0; transform:scale(0.85); transition:all 0.7s cubic-bezier(0.2,0.9,0.3,1); } .scale-in.visible { opacity:1; transform:scale(1); }
         .landing-page { min-height:100vh; background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%); position:relative; }
         .landing-header { display:flex; justify-content:space-between; align-items:center; padding:1rem 3rem; background:rgba(21,27,40,0.95); backdrop-filter:blur(10px); position:sticky; top:0; z-index:100; border-bottom:1px solid var(--card-border); flex-wrap:wrap; gap:1rem; }
         body.light-theme .landing-header { background:rgba(255,255,255,0.95); }
@@ -85,7 +82,7 @@
         .btn { padding:0.625rem 1.25rem; border:none; border-radius:var(--radius-sm); cursor:pointer; font-weight:500; font-size:0.875rem; display:inline-flex; align-items:center; gap:0.5rem; white-space:nowrap; } .btn-primary { background:var(--accent); color:var(--primary); } .btn-success { background:var(--success); color:white; } .btn-info { background:var(--accent2); color:white; } .btn-warning { background:var(--warning); color:white; } .btn-danger { background:var(--danger); color:white; } .btn-outline { background:transparent; border:1px solid var(--card-border); color:var(--text-primary); } .btn-outline.active { background:var(--accent); color:var(--primary); }
         .table-container { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); overflow:hidden; margin-bottom:1.5rem; overflow-x:auto; } .table-header { padding:1rem 1.25rem; background:rgba(42,111,151,0.05); border-bottom:1px solid var(--card-border); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; } table { width:100%; border-collapse:collapse; min-width:600px; } th { background:var(--primary); padding:0.875rem 1rem; font-size:0.75rem; font-weight:600; color:var(--gold); text-transform:uppercase; } td { padding:0.875rem 1rem; border-bottom:1px solid var(--card-border); } tr:hover { background:rgba(212,160,23,0.03); }
         .badge-local { background:rgba(45,138,78,0.15); color:var(--success); padding:0.25rem 0.75rem; border-radius:9999px; } .badge-importe { background:rgba(42,111,151,0.15); color:#5dade2; padding:0.25rem 0.75rem; border-radius:9999px; } .stock-ok { color:var(--success); } .stock-low { color:var(--warning); } .stock-critical { color:var(--danger); animation:pulse 2s infinite; } @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
-        .article-photo { width:48px; height:48px; border-radius:6px; object-fit:cover; cursor:pointer; margin-right:0.5rem; }
+        .article-photo { width:65px; height:65px; border-radius:9px; object-fit:cover; cursor:pointer; margin-right:0.5rem; }
         .sale-panel { display:grid; grid-template-columns:1fr 380px; gap:1.5rem; } .item-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:0.75rem; max-height:calc(100vh - 200px); overflow-y:auto; padding-top:0; margin-top:0; } .item-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:0.75rem; cursor:pointer; display:flex; align-items:flex-start; gap:0.5rem; } .item-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:var(--shadow-md); } .item-card.selected { border-color:var(--accent); background:rgba(212,160,23,0.08); } .item-card.out-of-stock { opacity:0.5; pointer-events:none; } .item-card .item-photo { width:60px; height:60px; border-radius:6px; object-fit:cover; } .item-card .item-info { flex:1; } .item-card .item-name { font-weight:600; font-size:0.8125rem; } .item-card .item-price { color:var(--gold); font-weight:700; font-size:1rem; } .item-card .item-stocks { font-size:0.65rem; color:var(--text-muted); margin-top:0.2rem; }
         .cart-panel { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:1.5rem; position:sticky; top:120px; max-height:calc(100vh - 140px); display:flex; flex-direction:column; } .cart-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem; } .cart-header h3 { color:var(--gold); font-size:1.125rem; } .cart-navigation { display:flex; gap:0.25rem; } .cart-nav-btn { width:28px; height:28px; border:1px solid var(--card-border); background:var(--primary); color:var(--text-primary); border-radius:6px; cursor:pointer; } .cart-nav-btn:hover { background:var(--accent); color:var(--primary); } .cart-indicator { font-size:0.8rem; color:var(--text-muted); }
         .server-selector { padding:0.75rem; background:rgba(42,111,151,0.1); border-radius:var(--radius-sm); margin-bottom:1rem; } .server-selector select { width:100%; padding:0.5rem; background:var(--primary); border:1px solid var(--card-border); border-radius:var(--radius-sm); color:var(--text-primary); }
@@ -108,13 +105,10 @@
         .debt-items-container { max-height:300px; overflow-y:auto; border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:0.75rem; margin-bottom:1rem; } .debt-item-row { display:grid; grid-template-columns:2fr 1fr 1fr 0.5fr; gap:0.5rem; align-items:center; padding:0.5rem; background:rgba(255,255,255,0.03); border-radius:var(--radius-sm); margin-bottom:0.375rem; }
         .debt-total-row { display:flex; justify-content:space-between; padding:0.75rem; background:rgba(212,160,23,0.1); border-radius:var(--radius-sm); margin:0.75rem 0; font-weight:600; }
         .clickable-stat { cursor:pointer; } .debt-status-badge { padding:0.2rem 0.5rem; border-radius:9999px; font-size:0.7rem; } .debt-status-pending { background:rgba(230,126,34,0.2); color:var(--warning); } .debt-status-paid { background:rgba(45,138,78,0.2); color:var(--success); } .hidden-item { opacity:0.4; } .hidden-item td { text-decoration:line-through; }
-        .date-filter-row { display:flex; gap:1rem; align-items:center; flex-wrap:wrap; margin-bottom:1rem; }
-        .date-filter-row input, .date-filter-row select { padding:0.5rem 0.75rem; border:1px solid var(--card-border); border-radius:var(--radius-sm); background:var(--card-bg); color:var(--text-primary); font-size:0.875rem; }
+        .date-filter-beautiful { display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap; margin-bottom:1rem; padding:0.75rem; background:var(--card-bg); border-radius:var(--radius); border:1px solid var(--card-border); } .date-filter-beautiful input, .date-filter-beautiful select { padding:0.5rem 0.75rem; border:1px solid var(--card-border); border-radius:var(--radius-sm); background:var(--primary); color:var(--text-primary); font-size:0.875rem; }
         .cart-icon-btn { background:var(--accent); color:var(--primary); border-radius:50%; width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; border:none; cursor:pointer; }
         .server-profile-photo { width:80px; height:80px; border-radius:12px; object-fit:cover; }
         .server-photo-large { width:80px; height:80px; border-radius:12px; object-fit:cover; }
-        .date-filter-beautiful { display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap; margin-bottom:1rem; padding:0.75rem; background:var(--card-bg); border-radius:var(--radius); border:1px solid var(--card-border); }
-        .date-filter-beautiful input, .date-filter-beautiful select { padding:0.5rem 0.75rem; border:1px solid var(--card-border); border-radius:var(--radius-sm); background:var(--primary); color:var(--text-primary); font-size:0.875rem; }
         .btn-enter-key { background:var(--accent); color:var(--primary); border:none; }
         @media (max-width:1200px) { .pricing-grid { grid-template-columns:repeat(2,1fr); } .sale-panel { grid-template-columns:1fr; } .cart-panel { position:relative; top:auto; max-height:none; } }
         @media (max-width:1024px) { .hero-section { grid-template-columns:1fr; padding:2rem; text-align:center; } .hero-content h1 { font-size:2.5rem; } .hero-stats { justify-content:center; } .hero-image { display:none; } .problems-grid { grid-template-columns:1fr; gap:2rem; } .features-section,.problems-section,.pricing-section { padding:2rem 1rem; } .settings-grid { grid-template-columns:1fr; } .landing-header { padding:1rem; } .header { padding:0.75rem 1rem; } .header h1 { font-size:1.25rem; } .header-date { display:none; } .nav-tab { padding:0.75rem 0.75rem; font-size:0.75rem; } .main-content { padding:0.75rem; } }
@@ -275,10 +269,10 @@
             <div id="stock-view-depot" class="stock-view"><h4 style="color:var(--gold); margin-bottom:1rem;">Stock Dépôt</h4><div id="depotStats" class="stats-grid"></div><input type="text" id="depotSearch" placeholder="🔍 Rechercher..." oninput="renderDepotStock()" style="margin-bottom:1rem; padding:0.5rem; width:100%;"><div class="table-container"><table><thead><tr><th>Article</th><th>Code Barre</th><th>Stock</th><th>Valeur</th><th>Actions</th></tr></thead><tbody id="depotStockTable"></tbody></table></div><div style="display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap;"><button class="btn btn-primary" onclick="openBulkTransferModal()"><i class="fas fa-exchange-alt"></i> Transfert en masse</button><button class="btn btn-success" onclick="openPurchaseModal()"><i class="fas fa-shopping-cart"></i> Achats boissons</button></div></div>
             <div id="stock-view-comptoir" class="stock-view" style="display:none;"><h4 style="color:var(--gold);">Stock Comptoir</h4><div id="comptoirStats" class="stats-grid"></div><input type="text" id="comptoirSearch" placeholder="🔍 Rechercher..." oninput="renderComptoirStock()" style="margin-bottom:1rem; padding:0.5rem; width:100%;"><div class="table-container"><table><thead><tr><th>Article</th><th>Code Barre</th><th>Stock</th><th>Valeur</th><th>Actions</th></tr></thead><tbody id="comptoirStockTable"></tbody></table></div><button class="btn btn-warning" onclick="openBulkReturnModal()" style="margin-top:1rem;"><i class="fas fa-undo-alt"></i> Transfert retour vers Dépôt</button></div>
             <div id="stock-view-movements" class="stock-view" style="display:none;"><h4 style="color:var(--gold);">Mouvements</h4><div class="date-filter-row"><input type="date" id="movementDate" placeholder="Date début"><input type="date" id="movementDateEnd" placeholder="Date fin"><select id="movementTypeFilter"><option value="all">Tous</option><option value="transfer">Transferts</option><option value="restock">Réappro.</option><option value="sale">Ventes</option><option value="return">Retours</option><option value="loss">Pertes</option><option value="purchase">Achats</option><option value="offer">Offerts</option><option value="consign">Consignation</option></select><button class="btn btn-primary" onclick="renderMovements()">Filtrer</button><button class="btn btn-info" onclick="exportMovementsPDF()"><i class="fas fa-file-pdf"></i> PDF</button><button class="btn btn-success" onclick="exportMovementsExcel()"><i class="fas fa-file-excel"></i> Excel</button></div><div class="table-container"><table><thead><tr><th>Date</th><th>Type</th><th>Article</th><th>Qté</th><th>De</th><th>Vers</th><th>Valeur</th><th>Motif</th></tr></thead><tbody id="movementsTable"></tbody></table></div></div>
-            <div id="stock-view-losses" class="stock-view" style="display:none;"><h4 style="color:var(--gold);">Pertes & Dépenses</h4><div class="date-filter-beautiful" style="margin-bottom:1rem;"><label>Du:</label><input type="date" id="lossesFilterStart"><label>Au:</label><input type="date" id="lossesFilterEnd"><button class="btn btn-info" onclick="filterLossesAndExpenses()"><i class="fas fa-search"></i> Filtrer</button><button class="btn btn-primary" onclick="exportLossesPDF()"><i class="fas fa-file-pdf"></i> PDF</button></div><div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;"><div class="settings-card"><h5>Signaler une perte</h5><div class="form-group"><label>Date</label><input type="date" id="lossDate" value=""></div><select id="lossLocation" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><option value="depot">Dépôt</option><option value="comptoir">Comptoir</option></select><select id="lossItem" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"></select><input type="number" id="lossQty" value="1" min="1" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><input type="text" id="lossReason" placeholder="Motif de la perte" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><button class="btn btn-danger" onclick="reportLoss()" style="width:100%;">Signaler</button></div><div class="settings-card"><h5>Ajouter une dépense</h5><div class="form-group"><label>Date</label><input type="date" id="expenseDate" value=""></div><input type="text" id="expenseDesc" placeholder="Description" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><input type="number" id="expenseAmount" placeholder="Montant" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><button class="btn btn-warning" onclick="addExpense()" style="width:100%;">Ajouter</button></div></div><div class="table-container"><table><thead><tr><th>Date</th><th>Type</th><th>Description</th><th>Valeur</th><th>Motif</th></tr></thead><tbody id="lossesTable"></tbody></table></div></div>
+            <div id="stock-view-losses" class="stock-view" style="display:none;"><h4 style="color:var(--gold);">Pertes & Dépenses</h4><div class="date-filter-beautiful" style="margin-bottom:1rem;"><label>Du:</label><input type="date" id="lossesFilterStart"><label>Au:</label><input type="date" id="lossesFilterEnd"><button class="btn btn-info" onclick="filterLossesAndExpenses()"><i class="fas fa-search"></i> Filtrer</button><button class="btn btn-primary" onclick="exportLossesPDF()"><i class="fas fa-file-pdf"></i> PDF</button></div><div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;"><div class="settings-card"><h5>Signaler une perte</h5><div class="form-group"><label>Date</label><input type="date" id="lossDate" value=""></div><select id="lossLocation" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><option value="depot">Dépôt</option><option value="comptoir">Comptoir</option></select><select id="lossItem" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"></select><input type="number" id="lossQty" value="1" min="1" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><input type="text" id="lossReason" placeholder="Motif de la perte" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><button class="btn btn-danger" onclick="reportLoss()" style="width:100%;">Signaler</button></div><div class="settings-card"><h5>Ajouter une dépense</h5><div class="form-group"><label>Date</label><input type="date" id="expenseDate" value=""></div><input type="text" id="expenseDesc" placeholder="Description" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><input type="number" id="expenseAmount" placeholder="Montant" style="width:100%; margin-bottom:0.75rem; padding:0.5rem;"><button class="btn btn-warning" onclick="addExpense()" style="width:100%;">Ajouter</button></div></div><div class="table-container"><td><thead><tr><th>Date</th><th>Type</th><th>Description</th><th>Valeur</th><th>Motif</th></tr></thead><tbody id="lossesTable"></tbody></table></div></div>
         </div>
         
-        <!-- SUIVI STOCK -->
+        <!-- SUIVI STOCK - VERSION AMÉLIORÉE -->
         <div class="tab-content" id="tab-tracking">
             <h3 style="color:var(--gold); margin-bottom:1rem;">Suivi Stock Comptoir</h3>
             <div class="date-filter-beautiful">
@@ -290,10 +284,32 @@
             <div class="table-container">
                 <table>
                     <thead>
-                        <tr><th>Article</th><th>Reste hier</th><th>Transfert</th><th>Total</th><th>Comptage</th><th>Vendus</th><th>Offerts</th><th>Pertes</th><th>Surplus</th><th>Reste</th></tr>
+                        <tr>
+                            <th>Article</th>
+                            <th>Reste hier</th>
+                            <th>Transfert</th>
+                            <th>Total</th>
+                            <th>Comptage</th>
+                            <th>Vendus</th>
+                            <th>Offerts</th>
+                            <th>Pertes</th>
+                            <th>Surplus</th>
+                            <th>Reste</th>
+                        </tr>
                     </thead>
                     <tbody id="trackingComptoirTable"></tbody>
                 </table>
+            </div>
+            <div id="trackingHelp" style="margin-top:1rem; padding:1rem; background:var(--card-bg); border-radius:var(--radius); border-left:4px solid var(--accent);">
+                <small><i class="fas fa-info-circle"></i> <strong>Comment ça marche?</strong><br>
+                • <strong>Reste hier</strong> = Stock comptoir de la veille<br>
+                • <strong>Transfert</strong> = Quantité transférée du dépôt vers comptoir aujourd'hui<br>
+                • <strong>Total</strong> = Reste hier + Transfert<br>
+                • <strong>Comptage</strong> = Saisissez le nombre réel d'articles dans votre comptoir (modifiable)<br>
+                • <strong>Vendus/Offerts</strong> = Calculés automatiquement à partir des ventes du jour<br>
+                • <strong>Pertes</strong> = Total - Comptage - Vendus - Offerts (s'adapte automatiquement)<br>
+                • <strong>Surplus</strong> = Comptage + Vendus + Offerts - Total (affiche les excédents)<br>
+                • <strong>Reste</strong> = Comptage - Vendus - Offerts (stock réel pour demain)</small>
             </div>
         </div>
         
@@ -375,16 +391,6 @@
 <div class="toast-container" id="toastContainer"></div>
 
 <script>
-// DEBUG - Trouver la boucle infinie
-let callStack = [];
-function logCall(name) {
-    callStack.push(name);
-    if(callStack.length > 50) {
-        console.error('Boucle détectée! Appels:', callStack.join(' → '));
-        debugger;
-    }
-    setTimeout(() => { callStack = []; }, 100);
-}    
 // ============================================
 // CONFIGURATION SUPABASE
 // ============================================
@@ -394,30 +400,7 @@ let supabaseClient = null;
 const TEAM_EMAIL = 'admin@mesbesextremes.cd';
 const TEAM_PASSWORD = 'Admin123!';
 
-// ============================================
-// LISTE COMPLÈTE DES 75 ARTICLES
-// ============================================
-
-// ============================================
-// LISTE COMPLÈTE DES 75 ARTICLES
-// ============================================
-
-// DÉFINITION ANTICIPÉE DE LA FONCTION showAuthModal
-window.showAuthModal = function(t) {
-    const modal = document.getElementById('authModal');
-    if(modal) modal.classList.add('active'); 
-    const loginForm = document.getElementById('loginForm');
-    const signupForm = document.getElementById('signupForm');
-    if(t === 'login') {
-        if(loginForm) loginForm.style.display = 'block';
-        if(signupForm) signupForm.style.display = 'none';
-    } else {
-        if(loginForm) loginForm.style.display = 'none';
-        if(signupForm) signupForm.style.display = 'block';
-    }
-};
-
-
+// LISTE COMPLÈTE DES ARTICLES
 const fullItemsList = [
     { name: "33 Export", price: 5000, type: "local", barcode: "5407010260830", depotStock: 0, comptoirStock: 0 },
     { name: "Appy", price: 2000, type: "importe", barcode: "6009709821798", depotStock: 24, comptoirStock: 12 },
@@ -523,10 +506,15 @@ let faceStream = null, faceApiLoaded = false, attendanceRecords = [], facePhotos
 let tempDebtItems = [], activityLogs = [];
 let dashboardStartDate = null, dashboardEndDate = null;
 let onlineStatus = navigator.onLine;
+let isScannerRunning = false;
+let isSyncing = false;
+let saveInProgress = false;
 
 for(let i=0; i<10; i++) cartDates[i] = new Date().toISOString().split('T')[0];
 
+// ============================================
 // FONCTIONS UTILITAIRES
+// ============================================
 function formatFC(a) { return a ? a.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' FC' : '0 FC'; }
 function formatDate(d) { if(!d) return ''; const date=new Date(d); return date.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'})+' '+date.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}); }
 function getCurrentDateFormatted() { const d=new Date(); return d.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'})+' '+d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}); }
@@ -536,14 +524,14 @@ function getRemainingStock(i) { return getTotalStock(i); }
 function getStockStatus(i) { const r = getRemainingStock(i); const t = i.type==='local'?settings.localThreshold:settings.importeThreshold; if(r<=0) return {class:'stock-critical',text:'Rupture!'}; if(r<=t) return {class:'stock-low',text:'Stock bas!'}; return {class:'stock-ok',text:'En stock'}; }
 function getVipSurcharge(p) { if(p<10000) return settings.vipSurcharge1; if(p<=30000) return settings.vipSurcharge2; return settings.vipSurcharge3; }
 function showToast(m, t='success') { const c=document.getElementById('toastContainer'); const d=document.createElement('div'); d.className='toast'; d.textContent=m; c.appendChild(d); setTimeout(()=>d.remove(),3000); }
-function toggleTheme() { document.body.classList.toggle('light-theme'); settings.theme = document.body.classList.contains('light-theme') ? 'light' : 'dark'; if(supabaseClient && currentUser && currentUser !== 'admin-local') syncSettingsToSupabase(); }
-function toggleAutoSave() { settings.autoSave = document.getElementById('autoSave').checked; if(supabaseClient && currentUser && currentUser !== 'admin-local') syncSettingsToSupabase(); showToast(settings.autoSave ? 'Sauvegarde auto activée' : 'Sauvegarde auto désactivée'); }
+function toggleTheme() { document.body.classList.toggle('light-theme'); settings.theme = document.body.classList.contains('light-theme') ? 'light' : 'dark'; saveData(); }
+function toggleAutoSave() { settings.autoSave = document.getElementById('autoSave').checked; saveData(); showToast(settings.autoSave ? 'Sauvegarde auto activée' : 'Sauvegarde auto désactivée'); }
 function scrollToCart() { document.getElementById('cartPanel').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-
-// INITIALISATION SUPABASE
 function initSupabase() { try { supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY); console.log('✅ Supabase connecté'); } catch(e) { console.warn('⚠️ Supabase non disponible'); } }
 
-// FONCTIONS DE RENDU AVEC VÉRIFICATIONS DES ÉLÉMENTS
+// ============================================
+// FONCTIONS DE RENDU
+// ============================================
 function renderComptoirStock() {
     const comptoirStats = document.getElementById('comptoirStats');
     const comptoirStockTable = document.getElementById('comptoirStockTable');
@@ -588,367 +576,82 @@ function renderLosses(startDate = '', endDate = '') {
     lossesTable.innerHTML = all.map(i=>`<tr><td>${formatDate(i.date)}</td><td>${i.type}</td><td>${i.itemName||i.description}</td><td>${formatFC(i.value||0)}</td><td>${i.reason||'-'}</td></tr>`).join(''); 
 }
 
-
-let renderingInProgress = false;
-
-function renderTracking() { 
-    if(renderingInProgress) return;
-    renderingInProgress = true;
-    
-    try {
-        const trackingTable = document.getElementById('trackingComptoirTable');
-        if(!trackingTable) return;
-        
-        const d = document.getElementById('trackingDate')?.value || new Date().toISOString().split('T')[0]; 
-        const transfers = stockMovements.filter(m => m.date.startsWith(d) && m.type === 'transfer');
-        const sales = stockMovements.filter(m => m.date.startsWith(d) && m.type === 'sale');
-        const offers = stockMovements.filter(m => m.date.startsWith(d) && m.type === 'offer');
-        const yesterday = new Date(new Date(d).getTime() - 86400000).toISOString().split('T')[0];
-        
-        trackingTable.innerHTML = items.filter(i => !i.hidden).map(item => {
-            const prev = trackingData.comptoir[yesterday]?.[item.id]?.resteHier || (item.comptoirStock || 0);
-            const tQ = transfers.filter(tr => tr.itemId === item.id).reduce((s, tr) => s + tr.qty, 0);
-            const total = prev + tQ;
-            let comptage = trackingData.comptoir[d]?.[item.id]?.comptageManuel;
-            if(comptage === undefined) comptage = total;
-            const sQ = sales.filter(sa => sa.itemId === item.id).reduce((s, sa) => s + sa.qty, 0);
-            const oQ = offers.filter(o => o.itemId === item.id).reduce((s, o) => s + o.qty, 0);
-            const pertes = Math.max(0, total - comptage - sQ - oQ);
-            const surplus = Math.max(0, comptage + sQ + oQ - total);
-            const reste = comptage - sQ - oQ;
-            
-            if(reste >= 0) { 
-                item.comptoirStock = reste; 
-            } else { 
-                item.comptoirStock = 0; 
-            }
-            
-            trackingData.comptoir[d] = trackingData.comptoir[d] || {};
-            trackingData.comptoir[d][item.id] = { 
-                resteHier: prev, 
-                transfert: tQ, 
-                comptageManuel: comptage, 
-                sold: sQ, 
-                offers: oQ, 
-                losses: pertes, 
-                surplus: surplus, 
-                reste: reste 
+function initTrackingData() {
+    if (!trackingData.comptoir) { trackingData.comptoir = {}; }
+    if (!trackingData.depot) { trackingData.depot = {}; }
+    const today = new Date().toISOString().split('T')[0];
+    if (!trackingData.comptoir[today]) {
+        trackingData.comptoir[today] = {};
+        items.forEach(item => {
+            trackingData.comptoir[today][item.id] = {
+                resteHier: item.comptoirStock || 0,
+                transfert: 0,
+                comptageManuel: item.comptoirStock || 0,
+                sold: 0,
+                offers: 0,
+                losses: 0,
+                surplus: 0,
+                reste: item.comptoirStock || 0
             };
-            
-            return `<tr data-id="${item.id}">
-                <td style="font-size:0.8rem;">${item.name}${item.hidden ? ' [Masqué]' : ''}</td>
-                <td>${prev}</td>
-                <td>${tQ}</td>
-                <td>${total}</td>
-                <td><input type="number" class="editable-input" value="${comptage}" onchange="updateTrackingComptage('${d}',${item.id},this.value)"></td>
-                <td>${sQ}</td>
-                <td>${oQ}</td>
-                <td class="${pertes > 0 ? 'stock-critical' : ''}">${pertes}</td>
-                <td class="${surplus > 0 ? 'stock-ok' : ''}">${surplus}</td>
-                <td>${reste}</td>
-            </tr>`;
-        }).join('');
-        
-        saveData();
-        
-    } finally {
-        renderingInProgress = false;
+        });
     }
+    saveData();
 }
 
-
+function renderTracking() { 
+    const trackingTable = document.getElementById('trackingComptoirTable');
+    if(!trackingTable) return;
+    
+    const d = document.getElementById('trackingDate')?.value || new Date().toISOString().split('T')[0]; 
+    const transfers = stockMovements.filter(m => m.date.startsWith(d) && m.type === 'transfer');
+    const sales = stockMovements.filter(m => m.date.startsWith(d) && m.type === 'sale');
+    const offers = stockMovements.filter(m => m.date.startsWith(d) && m.type === 'offer');
+    const yesterday = new Date(new Date(d).getTime() - 86400000).toISOString().split('T')[0];
+    
+    trackingTable.innerHTML = items.filter(i => !i.hidden).map(item => {
+        const prev = trackingData.comptoir[yesterday]?.[item.id]?.resteHier || (item.comptoirStock || 0);
+        const tQ = transfers.filter(tr => tr.itemId === item.id).reduce((s, tr) => s + tr.qty, 0);
+        const total = prev + tQ;
+        let comptage = trackingData.comptoir[d]?.[item.id]?.comptageManuel;
+        if(comptage === undefined) comptage = total;
+        const sQ = sales.filter(sa => sa.itemId === item.id).reduce((s, sa) => s + sa.qty, 0);
+        const oQ = offers.filter(o => o.itemId === item.id).reduce((s, o) => s + o.qty, 0);
+        const pertes = Math.max(0, total - comptage - sQ - oQ);
+        const surplus = Math.max(0, comptage + sQ + oQ - total);
+        const reste = comptage - sQ - oQ;
+        
+        if(reste >= 0) { item.comptoirStock = reste; } else { item.comptoirStock = 0; }
+        
+        trackingData.comptoir[d] = trackingData.comptoir[d] || {};
+        trackingData.comptoir[d][item.id] = { 
+            resteHier: prev, transfert: tQ, comptageManuel: comptage, sold: sQ, offers: oQ, losses: pertes, surplus: surplus, reste: reste 
+        };
+        
+        return `<tr data-id="${item.id}">
+            <td style="font-size:0.8rem;">${item.name}${item.hidden ? ' [Masqué]' : ''}</td>
+            <td>${prev}</td>
+            <td>${tQ}</td>
+            <td>${total}</td>
+            <td><input type="number" class="editable-input" value="${comptage}" onchange="updateTrackingComptage('${d}',${item.id},this.value)"></td>
+            <td>${sQ}</td>
+            <td>${oQ}</td>
+            <td class="${pertes > 0 ? 'stock-critical' : ''}">${pertes}</td>
+            <td class="${surplus > 0 ? 'stock-ok' : ''}">${surplus}</td>
+            <td>${reste}</td>
+        </tr>`;
+    }).join('');
+    
+    saveData();
+}
 
 function updateTrackingComptage(d, id, v) { 
     if(!trackingData.comptoir[d]) trackingData.comptoir[d] = {}; 
     if(!trackingData.comptoir[d][id]) trackingData.comptoir[d][id] = {}; 
     trackingData.comptoir[d][id].comptageManuel = parseInt(v) || 0; 
-    
-    // Mettre à jour uniquement la ligne concernée sans re-render complet
-    updateSingleTrackingRow(d, id);
-    
+    renderTracking(); 
     saveData(); 
 }
 
-function updateSingleTrackingRow(d, id) {
-    const item = items.find(i => i.id === id);
-    if(!item) return;
-    
-    const transfers = stockMovements.filter(m => m.date.startsWith(d) && m.type === 'transfer' && m.itemId === id);
-    const sales = stockMovements.filter(m => m.date.startsWith(d) && m.type === 'sale' && m.itemId === id);
-    const offers = stockMovements.filter(m => m.date.startsWith(d) && m.type === 'offer' && m.itemId === id);
-    
-    const yesterday = new Date(new Date(d).getTime() - 86400000).toISOString().split('T')[0];
-    const prev = trackingData.comptoir[yesterday]?.[id]?.resteHier || (item.comptoirStock || 0);
-    const tQ = transfers.reduce((s, tr) => s + tr.qty, 0);
-    const total = prev + tQ;
-    const comptage = trackingData.comptoir[d]?.[id]?.comptageManuel || total;
-    const sQ = sales.reduce((s, sa) => s + sa.qty, 0);
-    const oQ = offers.reduce((s, o) => s + o.qty, 0);
-    const pertes = Math.max(0, total - comptage - sQ - oQ);
-    const surplus = Math.max(0, comptage + sQ + oQ - total);
-    const reste = comptage - sQ - oQ;
-    
-    // Mettre à jour les cellules dans le DOM
-    const row = document.querySelector(`#trackingComptoirTable tr[data-id="${id}"]`);
-    if(row) {
-        if(row.cells[7]) row.cells[7].textContent = pertes;
-        if(row.cells[7]) row.cells[7].className = pertes > 0 ? 'stock-critical' : '';
-        if(row.cells[8]) row.cells[8].textContent = surplus;
-        if(row.cells[8]) row.cells[8].className = surplus > 0 ? 'stock-ok' : '';
-        if(row.cells[9]) row.cells[9].textContent = reste;
-        
-        // Optionnel : mettre à jour le stock de l'article
-        if(reste >= 0) {
-            item.comptoirStock = reste;
-        } else {
-            item.comptoirStock = 0;
-        }
-    }
-    
-    // Mettre à jour les données de tracking
-    trackingData.comptoir[d][id] = { 
-        resteHier: prev, 
-        transfert: tQ, 
-        comptageManuel: comptage, 
-        sold: sQ, 
-        offers: oQ, 
-        losses: pertes, 
-        surplus: surplus, 
-        reste: reste 
-    };
-}
-
-
-let renderAllInProgress = false;
-
-function renderAllSafe() {
-    if(renderAllInProgress) return;
-    renderAllInProgress = true;
-    
-    try {
-        renderDashboard(); 
-        renderSaleItems(); 
-        renderInventory(); 
-        renderDepotStock(); 
-        renderComptoirStock(); 
-        renderMovements(); 
-        // Ne pas appeler renderTracking() ici pour éviter la boucle
-        // renderTracking(); 
-        renderHistory(); 
-        renderAlerts(); 
-        renderServerStatsByDate(); 
-        updateAlertBadge(); 
-        updateTransferSelects(); 
-        updateServerSelects(); 
-        updateHistoryFilters(); 
-        updateDebtFilters(); 
-        updateCartDateInput(); 
-        loadUsers(); 
-        renderSuppliersList(); 
-    } finally {
-        renderAllInProgress = false;
-    }
-}
-
-// Modifier renderAll() existante pour utiliser renderAllSafe()
-function renderAll() { 
-    renderAllSafe();
-}
-
-
-function renderDashboard() { 
-    const sold = items.reduce((s,i)=>s+(i.sold||0), 0); 
-    let filteredSales = [...salesHistory];
-    if (dashboardStartDate) filteredSales = filteredSales.filter(s => s.date.split('T')[0] >= dashboardStartDate);
-    if (dashboardEndDate) filteredSales = filteredSales.filter(s => s.date.split('T')[0] <= dashboardEndDate);
-    const rev = filteredSales.reduce((s,sa)=>s+(sa.grandTotal||0), 0); 
-    const alertC = items.filter(i=>getRemainingStock(i)<=(i.type==='local'?settings.localThreshold:settings.importeThreshold)).length; 
-    const dVal = items.reduce((s,i)=>s+((i.depotStock||0)*i.price), 0); 
-    const cVal = items.reduce((s,i)=>s+((i.comptoirStock||0)*i.price), 0); 
-    let revLocal = 0, revImporte = 0, revVIP = 0; 
-    const localItems = [], importItems = []; 
-    filteredSales.forEach(sale => { sale.items.forEach(si => { const item = si.item; if (item) { const itemTotal = (item.price * si.qty) + (getVipSurcharge(item.price) * (si.vipCount || 0)); if (item.type === 'local') { revLocal += itemTotal; localItems.push({name: item.name, qty: si.qty, price: item.price, total: itemTotal}); } else if (item.type === 'importe') { revImporte += itemTotal; importItems.push({name: item.name, qty: si.qty, price: item.price, total: itemTotal}); } } }); revVIP += sale.vipSurcharge || 0; }); 
-    const totalDebts = debts.filter(d => d.status === 'pending').reduce((s,d)=>s+d.value,0);
-    const totalLosses = losses.reduce((s,l)=>s+l.value,0);
-    const totalExpenses = expenses.reduce((s,e)=>s+e.amount,0);
-    
-    window._dashboardLocalItems = localItems;
-    window._dashboardImportItems = importItems;
-    
-    const statsGrid = document.getElementById('statsGrid');
-    if(statsGrid) {
-        statsGrid.innerHTML = `<div class="stat-card clickable-stat" onclick='showDetailsModalLocal()'><i class="fas fa-flag"></i><div class="stat-value">${formatFC(revLocal)}</div><div class="stat-label">Local</div></div><div class="stat-card clickable-stat" onclick='showDetailsModalImport()'><i class="fas fa-globe"></i><div class="stat-value">${formatFC(revImporte)}</div><div class="stat-label">Import</div></div><div class="stat-card clickable-stat" onclick='showAlertsModal()'><i class="fas fa-exclamation-triangle"></i><div class="stat-value">${alertC}</div><div class="stat-label">Alertes</div></div><div class="stat-card"><i class="fas fa-money-bill"></i><div class="stat-value">${formatFC(rev)}</div><div class="stat-label">CA Total</div><div class="stat-detail">VIP: ${formatFC(revVIP)}</div></div><div class="stat-card clickable-stat" onclick='openDebtDetailsModal()'><i class="fas fa-hand-holding-usd"></i><div class="stat-value">${formatFC(totalDebts)}</div><div class="stat-label">Dettes en cours</div><div class="stat-detail">${debts.filter(d=>d.status==='pending').length} dette(s)</div></div><div class="stat-card clickable-stat" onclick='openLossesDetailsModal()'><i class="fas fa-exclamation-triangle"></i><div class="stat-value">${formatFC(totalLosses+totalExpenses)}</div><div class="stat-label">Pertes & Dépenses</div><div class="stat-detail">Pertes: ${formatFC(totalLosses)} | Dépenses: ${formatFC(totalExpenses)}</div></div><div class="stat-card"><i class="fas fa-box"></i><div class="stat-value">${sold}</div><div class="stat-label">Vendus</div></div><div class="stat-card"><i class="fas fa-warehouse"></i><div class="stat-value">${formatFC(dVal)}</div><div class="stat-label">Dépôt</div></div><div class="stat-card"><i class="fas fa-store"></i><div class="stat-value">${formatFC(cVal)}</div><div class="stat-label">Comptoir</div></div>`; 
-    }
-    filterDashboard(); 
-}
-
-function showDetailsModalLocal() {
-    const localItems = window._dashboardLocalItems || [];
-    if(!localItems || localItems.length === 0) { showToast('Aucune vente locale pour cette période'); return; }
-    let html = '<h4>Ventes Locales</h4><table style="width:100%"><thead><tr><th>Article</th><th>Qté</th><th>Prix U</th><th>Total</th></tr></thead><tbody>';
-    localItems.forEach(i => html += `<tr><td style="text-align:left">${i.name}</td><td style="text-align:center">${i.qty}</td><td style="text-align:right">${formatFC(i.price)}</td><td style="text-align:right">${formatFC(i.total)}</td>`);
-    html += '</tbody></table>';
-    const detailsModalTitle = document.getElementById('detailsModalTitle');
-    const detailsModalContent = document.getElementById('detailsModalContent');
-    if(detailsModalTitle) detailsModalTitle.textContent = 'Ventes Locales';
-    if(detailsModalContent) detailsModalContent.innerHTML = html;
-    const detailsModal = document.getElementById('detailsModal');
-    if(detailsModal) detailsModal.classList.add('active');
-}
-
-function showDetailsModalImport() {
-    const importItems = window._dashboardImportItems || [];
-    if(!importItems || importItems.length === 0) { showToast('Aucune vente importée pour cette période'); return; }
-    let html = '<h4>Ventes Importées</h4><table style="width:100%"><thead><tr><th>Article</th><th>Qté</th><th>Prix U</th><th>Total</th></tr></thead><tbody>';
-    importItems.forEach(i => html += `<tr><td style="text-align:left">${i.name}</td><td style="text-align:center">${i.qty}</td><td style="text-align:right">${formatFC(i.price)}</td><td style="text-align:right">${formatFC(i.total)}</td>`);
-    html += '</tbody></table>';
-    const detailsModalTitle = document.getElementById('detailsModalTitle');
-    const detailsModalContent = document.getElementById('detailsModalContent');
-    if(detailsModalTitle) detailsModalTitle.textContent = 'Ventes Importées';
-    if(detailsModalContent) detailsModalContent.innerHTML = html;
-    const detailsModal = document.getElementById('detailsModal');
-    if(detailsModal) detailsModal.classList.add('active');
-}
-
-function showAlertsModal() {
-    const alertItems = items.filter(i => getRemainingStock(i) <= (i.type === 'local' ? settings.localThreshold : settings.importeThreshold) && !i.hidden);
-    let html = '<h4>Articles en alerte stock bas</h4><table style="width:100%"><thead><tr><th>Article</th><th>Type</th><th>Stock Dépôt</th><th>Stock Comptoir</th><th>Total</th><th>Seuil</th></tr></thead><tbody>';
-    alertItems.forEach(i => html += `<tr><td style="text-align:left">${i.name}</td><td style="text-align:center">${i.type === 'local' ? 'Local' : 'Importé'}</td><td style="text-align:center">${i.depotStock || 0}</td><td style="text-align:center">${i.comptoirStock || 0}</td><td style="text-align:center">${getRemainingStock(i)}</td><td style="text-align:center">${i.type === 'local' ? settings.localThreshold : settings.importeThreshold}</td>`);
-    html += '</tbody></table>';
-    const detailsModalTitle = document.getElementById('detailsModalTitle');
-    const detailsModalContent = document.getElementById('detailsModalContent');
-    if(detailsModalTitle) detailsModalTitle.textContent = 'Alertes Stock Bas';
-    if(detailsModalContent) detailsModalContent.innerHTML = html;
-    const detailsModal = document.getElementById('detailsModal');
-    if(detailsModal) detailsModal.classList.add('active');
-}
-
-function openDebtDetailsModal() {
-    const pendingDebts = debts.filter(d => d.status === 'pending');
-    let html = '<h4>Dettes en cours</h4><table style="width:100%"><thead><tr><th>Client</th><th>Article</th><th>Qté</th><th>Valeur</th><th>Date limite</th><th>Serveur</th></tr></thead><tbody>';
-    pendingDebts.forEach(d => html += `<tr><td style="text-align:left">${d.clientName}</td><td style="text-align:left">${d.itemName}</td><td style="text-align:center">${d.qty}</td><td style="text-align:right">${formatFC(d.value)}</td><td style="text-align:center">${d.dueDate || '-'}</td><td style="text-align:left">${d.serverName || '-'}</td>`);
-    html += '</tbody></table>';
-    const detailsModalTitle = document.getElementById('detailsModalTitle');
-    const detailsModalContent = document.getElementById('detailsModalContent');
-    if(detailsModalTitle) detailsModalTitle.textContent = 'Dettes en cours';
-    if(detailsModalContent) detailsModalContent.innerHTML = html;
-    const detailsModal = document.getElementById('detailsModal');
-    if(detailsModal) detailsModal.classList.add('active');
-}
-
-function openLossesDetailsModal() {
-    const allLosses = [...losses.map(l=>({...l, type:'Perte'})), ...expenses.map(e=>({...e, type:'Dépense'}))].slice(-20);
-    let html = '<h4>Pertes et Dépenses (20 derniers)</h4><table style="width:100%"><thead><tr><th>Date</th><th>Type</th><th>Description</th><th>Valeur</th></tr></thead><tbody>';
-    allLosses.forEach(l => html += `<tr><td style="text-align:center">${formatDate(l.date)}</td><td style="text-align:center">${l.type}</td><td style="text-align:left">${l.itemName || l.description}</td><td style="text-align:right">${formatFC(l.value || l.amount || 0)}</td>`);
-    html += '</tbody></table>';
-    const detailsModalTitle = document.getElementById('detailsModalTitle');
-    const detailsModalContent = document.getElementById('detailsModalContent');
-    if(detailsModalTitle) detailsModalTitle.textContent = 'Pertes et Dépenses';
-    if(detailsModalContent) detailsModalContent.innerHTML = html;
-    const detailsModal = document.getElementById('detailsModal');
-    if(detailsModal) detailsModal.classList.add('active');
-}
-
-function filterDashboard() { 
-    const s=document.getElementById('dashboardSearch')?.value.toLowerCase()||''; 
-    const f=document.getElementById('dashboardFilter')?.value||'all'; 
-    const filtered=items.filter(i=>i.name.toLowerCase().includes(s)&&(f==='all'||i.type===f)&&!i.hidden); 
-    const tbody=document.getElementById('dashboardTable'); 
-    if(tbody){
-        tbody.innerHTML=filtered.map((item,idx)=>{ const st=getStockStatus(item); return `<tr class="${item.hidden?'hidden-item':''}"><td>${idx+1}</td><td><img src="${item.photo||'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'48\' height=\'48\'%3E%3Crect width=\'48\' height=\'48\' fill=\'%232a3344\'/%3E%3Ctext x=\'24\' y=\'30\' text-anchor=\'middle\' fill=\'%238a94a6\' font-size=\'16\'%3E📦%3C/text%3E%3C/svg%3E'}" class="article-photo" onclick="showArticleDetails(${item.id})"><td><strong>${item.name}</strong>${item.hidden?' <span style="color:var(--warning);">[Masqué]</span>':''}</td><td>${item.barcode||'-'}</td><td><span class="badge-${item.type}">${item.type==='local'?'🟢':'🔵'}</span></td><td>${formatFC(item.price)}</td><td>${item.depotStock||0}</td><td>${item.comptoirStock||0}</td><td class="${st.class}">${getRemainingStock(item)}</td><td class="${st.class}">${st.text}</td>`; }).join(''); 
-    }
-}
-
-function filterDashboardByDate() {
-    dashboardStartDate = document.getElementById('dashboardStartDate')?.value;
-    dashboardEndDate = document.getElementById('dashboardEndDate')?.value;
-    renderDashboard();
-}
-
-function resetDashboardDateFilter() {
-    dashboardStartDate = null;
-    dashboardEndDate = null;
-    const startDateInput = document.getElementById('dashboardStartDate');
-    const endDateInput = document.getElementById('dashboardEndDate');
-    if(startDateInput) startDateInput.value = '';
-    if(endDateInput) endDateInput.value = '';
-    renderDashboard();
-}
-
-// FONCTIONS SCANNER AVEC FERMETURE CORRECTE
-function openQRScanner(mode) { 
-    qrScanMode=mode; 
-    const modal = document.getElementById('qrScannerModal');
-    if(modal) modal.classList.add('active'); 
-    currentCameraFacing = "environment"; 
-    startQRScanner(); 
-}
-
-function startQRScanner() { 
-    const qrReader = document.getElementById('qr-reader'); 
-    if(qrReader) qrReader.innerHTML = ''; 
-    if(html5QrCode){ 
-        html5QrCode.stop().then(()=>html5QrCode.clear()).catch(e=>{}); 
-    } 
-    html5QrCode = new Html5Qrcode("qr-reader"); 
-    const config = { fps: 10, qrbox: { width: 250, height: 250 } }; 
-    html5QrCode.start({ facingMode: currentCameraFacing }, config, onScanSuccess, onScanFailure).catch(err => { 
-        showToast('Erreur caméra: ' + err, 'error'); 
-    }); 
-}
-
-function switchCamera() { 
-    currentCameraFacing = currentCameraFacing === "environment" ? "user" : "environment"; 
-    startQRScanner(); 
-}
-
-function onScanSuccess(decodedText) { 
-    if(qrScanMode==='add') { 
-        const addBarcode = document.getElementById('addBarcode');
-        if(addBarcode) addBarcode.value=decodedText; 
-        closeQRScanner(); 
-    } else if(qrScanMode==='edit') { 
-        const editBarcode = document.getElementById('editBarcode');
-        if(editBarcode) editBarcode.value=decodedText; 
-        closeQRScanner(); 
-    } else if(qrScanMode==='sale'){ 
-        const item=items.find(i=>i.barcode===decodedText); 
-        if(item){ 
-            scannedItem=item; 
-            closeQRScanner(); 
-            showScanActionModal(item); 
-        } else { 
-            showToast('Article non trouvé'); 
-        } 
-    } 
-}
-
-function onScanFailure(error) {}
-
-function openQRScannerForSale() { openQRScanner('sale'); }
-
-function closeQRScanner() { 
-    if(html5QrCode){ 
-        html5QrCode.stop().then(()=>html5QrCode.clear()).catch(e=>{console.log('Erreur arrêt scanner:', e);}); 
-        html5QrCode = null;
-    } 
-    const modal = document.getElementById('qrScannerModal');
-    if(modal) modal.classList.remove('active'); 
-}
-
-function generateAndSetQR(mode) { 
-    const q=Math.random().toString(36).substring(2,10).toUpperCase(); 
-    if(mode==='add') {
-        const addBarcode = document.getElementById('addBarcode');
-        if(addBarcode) addBarcode.value=q;
-    } else if(mode==='edit') {
-        const editBarcode = document.getElementById('editBarcode');
-        if(editBarcode) editBarcode.value=q;
-    }
-    showToast(`Code: ${q}`); 
-}
-
-// AUTRES FONCTIONS (ventes, inventaire, serveurs, etc.)
 function renderSaleItems() { 
     const saleItemGrid = document.getElementById('saleItemGrid');
     if(!saleItemGrid) return;
@@ -1147,6 +850,15 @@ function updateServerSelects() {
     } 
 }
 
+function updateServerFilterSelect() {
+    const serverFilter = document.getElementById('serverFilterSelect');
+    if(!serverFilter) return;
+    serverFilter.innerHTML = '<option value="all">Tous les serveurs</option>';
+    servers.forEach(server => {
+        serverFilter.innerHTML += `<option value="${server.id}">${server.name}</option>`;
+    });
+}
+
 function updateServerPhoto() { cartServers[currentCartIndex]=document.getElementById('serverSelect')?.value||''; }
 
 function validateSale() { 
@@ -1210,7 +922,7 @@ function getCompanyLegalInfo() {
 function showReceipt(sale, method) { 
     currentReceiptSale = sale; 
     const d=formatDate(sale.date); 
-    const methodNames={mobile:'Mobile Money',visa:'Visa',mastercard:'MasterCard',cash:'Espèces'}; 
+    const methodNames={mobile:'Mobile Money',visa:'Visa',mastercard:'MasterCard',cash:'Espèces',debt_settlement:'Règlement Dette'}; 
     const legalInfo = getCompanyLegalInfo(); 
     let h=`<div class="receipt-small"><div class="receipt-logo">${companyInfo.logo?`<img src="${companyInfo.logo}">`:'🍺'}</div><h3>${companyInfo.name}</h3><p>${companyInfo.slogan}</p><p>${companyInfo.address}</p><p>${companyInfo.phone} | ${companyInfo.email}</p>${legalInfo?`<p class="company-legal">${legalInfo}</p>`:''}<p>Facture N°${String(sale.id).padStart(5,'0')}</p><p>Date: ${d}</p><p>Serveur: ${sale.server.name}</p><p>Généré par: ${userProfile?.fullName || currentUser}</p><table><thead><tr><th>Article</th><th>Qté</th><th>Prix U</th><th>Total</th></tr></thead><tbody>`; 
     sale.items.forEach(si=>{ 
@@ -1272,7 +984,7 @@ function renderInventory() {
     else if(f==='expired') filtered=filtered.filter(i=>i.expiryDate&&new Date(i.expiryDate)<new Date()); 
     inventoryTable.innerHTML=filtered.map((item,idx)=>{ 
         const st=getStockStatus(item); 
-        return `<tr class="${item.hidden?'hidden-item':''}"><td>${idx+1}</td><td><img src="${item.photo||'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'48\' height=\'48\'%3E%3Crect width=\'48\' height=\'48\' fill=\'%232a3344\'/%3E%3Ctext x=\'24\' y=\'30\' text-anchor=\'middle\' fill=\'%238a94a6\' font-size=\'16\'%3E📦%3C/text%3E%3C/svg%3E'}" class="article-photo" onclick="showArticleDetails(${item.id})"><td><strong>${item.name}</strong>${item.hidden?' <span style="color:var(--warning);">[Masqué]</span>':''}</td><td>${item.barcode||'-'}</td><td><span class="badge-${item.type}">${item.type==='local'?'🟢':'🔵'}</span></td><td>${formatFC(item.price)}</td><td>${item.depotStock||0}</td><td>${item.comptoirStock||0}</td><td class="${st.class}">${getRemainingStock(item)}</td><td>${item.expiryDate||'-'}</td><td><button class="btn btn-info btn-sm" onclick="openEditItemModal(${item.id})"><i class="fas fa-edit"></i></button><button class="btn btn-warning btn-sm" onclick="toggleHideItem(${item.id})"><i class="fas ${item.hidden?'fa-eye':'fa-eye-slash'}"></i></button><button class="btn btn-danger btn-sm" onclick="deleteItem(${item.id})"><i class="fas fa-trash"></i></button></td>`; 
+        return `<tr class="${item.hidden?'hidden-item':''}"><tr>${idx+1}</td><td><img src="${item.photo||'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'48\' height=\'48\'%3E%3Crect width=\'48\' height=\'48\' fill=\'%232a3344\'/%3E%3Ctext x=\'24\' y=\'30\' text-anchor=\'middle\' fill=\'%238a94a6\' font-size=\'16\'%3E📦%3C/text%3E%3C/svg%3E'}" class="article-photo" onclick="showArticleDetails(${item.id})"><td><strong>${item.name}</strong>${item.hidden?' <span style="color:var(--warning);">[Masqué]</span>':''}</td><td>${item.barcode||'-'}</td><td><span class="badge-${item.type}">${item.type==='local'?'🟢':'🔵'}</span></td><td>${formatFC(item.price)}</td><td>${item.depotStock||0}</td><td>${item.comptoirStock||0}</td><td class="${st.class}">${getRemainingStock(item)}</td><td>${item.expiryDate||'-'}</td><td><button class="btn btn-info btn-sm" onclick="openEditItemModal(${item.id})"><i class="fas fa-edit"></i></button><button class="btn btn-warning btn-sm" onclick="toggleHideItem(${item.id})"><i class="fas ${item.hidden?'fa-eye':'fa-eye-slash'}"></i></button><button class="btn btn-danger btn-sm" onclick="deleteItem(${item.id})"><i class="fas fa-trash"></i></button></td></tr>`; 
     }).join(''); 
 }
 
@@ -1783,7 +1495,7 @@ function renderServerStatsByDate() {
             const presentDays = s.presentDays || 0; 
             const salaryEarned = Math.round((presentDays / workDays) * monthlySalary) || 0; 
             const lostSalary = monthlySalary - salaryEarned; 
-            return `<tr><td style="text-align:center;"><img src="${s.photo || 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'80\'%3E%3Crect width=\'80\' height=\'80\' fill=\'%232a3344\'/%3E%3Ctext x=\'40\' y=\'48\' text-anchor=\'middle\' fill=\'%238a94a6\' font-size=\'24\'%3E👤%3C/text%3E%3C/svg%3E'}" class="server-photo-large"></td><td>${s.name}<br><small>${s.matricule || ''}</small></td><td>${st.orders}</td><td>${st.bottes}</td><td>${formatFC(st.revenue)}</td><td>${s.present ? '✅' : '❌'} (${presentDays}/${workDays})<br><small>Gagné: ${formatFC(salaryEarned)} | En entente: ${formatFC(lostSalary)}</small></td><td><button class="btn btn-info btn-sm" onclick="editServer('${s.id}')"><i class="fas fa-edit"></i></button></td></tr>`; 
+            return `<tr><td style="text-align:center;"><img src="${s.photo || 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'80\'%3E%3Crect width=\'80\' height=\'80\' fill=\'%232a3344\'/%3E%3Ctext x=\'40\' y=\'48\' text-anchor=\'middle\' fill=\'%238a94a6\' font-size=\'24\'%3E👤%3C/text%3E%3C/svg%3E'}" class="server-photo-large" style="width:80px; height:80px; object-fit:cover; border-radius:12px;"></td><td>${s.name}<br><small>${s.matricule || ''}</small></td><td>${st.orders}</td><td>${st.bottes}</td><td>${formatFC(st.revenue)}</td><td>${s.present ? '✅' : '❌'} (${presentDays}/${workDays})<br><small>Gagné: ${formatFC(salaryEarned)} | En entente: ${formatFC(lostSalary)}</small></td><td><button class="btn btn-info btn-sm" onclick="editServer('${s.id}')"><i class="fas fa-edit"></i></button></td></tr>`; 
         }).join(''); 
     } 
 }
@@ -2342,81 +2054,283 @@ function confirmScanAction() {
     closeModal('scanActionModal'); 
 }
 
-function findServerByName(input) { 
-    const search=input.toLowerCase().trim(); 
-    return servers.find(s=>{ 
-        const full=s.name.toLowerCase(); 
-        const first=s.name.split(' ')[0].toLowerCase(); 
-        const last=s.name.split(' ').slice(-1)[0].toLowerCase(); 
-        return full===search||full.includes(search)||search.includes(first)||search.includes(last)||full.startsWith(search)||full.endsWith(search); 
-    }); 
-}
-
-async function openFaceRecognitionModal() { 
-    const modal = document.getElementById('faceModal');
+// ============================================
+// FONCTIONS SCANNER QR
+// ============================================
+window.showAuthModal = function(t) {
+    const modal = document.getElementById('authModal');
     if(modal) modal.classList.add('active'); 
-    faceCameraFacing = "user"; 
-    try { 
-        faceStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: faceCameraFacing } }); 
-        const video = document.getElementById('faceVideo'); 
-        if(video) video.srcObject = faceStream; 
-        if(!faceApiLoaded){ 
-            await faceapi.nets.tinyFaceDetector.loadFromUri('https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/weights'); 
-            await faceapi.nets.faceLandmark68Net.loadFromUri('https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/weights'); 
-            await faceapi.nets.faceRecognitionNet.loadFromUri('https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/weights'); 
-            faceApiLoaded = true; 
-        } 
-    } catch(e){ showToast('Erreur caméra: ' + e.message, 'error'); } 
-}
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+    if(t === 'login') {
+        if(loginForm) loginForm.style.display = 'block';
+        if(signupForm) signupForm.style.display = 'none';
+    } else {
+        if(loginForm) loginForm.style.display = 'none';
+        if(signupForm) signupForm.style.display = 'block';
+    }
+};
 
-async function switchFaceCamera() { 
-    if(faceStream){ faceStream.getTracks().forEach(t=>t.stop()); faceStream = null; } 
-    faceCameraFacing = faceCameraFacing === "user" ? "environment" : "user"; 
-    try { 
-        faceStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: faceCameraFacing } }); 
-        const video = document.getElementById('faceVideo'); 
-        if(video) video.srcObject = faceStream; 
-    } catch(e){ showToast('Erreur caméra: ' + e.message, 'error'); } 
-}
-
-async function markAttendance() { 
-    const video = document.getElementById('faceVideo'); 
-    if(!video || !faceStream) { showToast('Caméra non disponible'); return; } 
-    const n = prompt('Entrez votre nom pour le pointage:'); 
-    if(!n) return; 
-    const s = findServerByName(n); 
-    if(!s){ showToast('Serveur non trouvé. Contactez l\'administrateur.', 'error'); return; } 
-    const now = new Date(); 
-    const today = now.toISOString().split('T')[0]; 
-    const alreadyCheckedToday = attendanceRecords.some(r => r.serverId === s.id && r.date === today && r.type === 'in'); 
-    if(!alreadyCheckedToday) { 
-        s.present = true; 
-        s.presentDays = (s.presentDays || 0) + 1; 
-        s.checkInTime = now.toISOString(); 
-        attendanceRecords.push({ serverId: s.id, serverName: s.name, type: 'in', date: today, time: now.toISOString() }); 
-        saveData(); 
-        const workDays = settings.workDaysPerMonth; 
-        const presentDays = s.presentDays || 0; 
-        const absentDays = workDays - presentDays; 
-        const monthlySalary = (s.dailySalary || 0) * workDays; 
-        const earnedSalary = (s.dailySalary || 0) * presentDays; 
-        const lostSalary = monthlySalary - earnedSalary; 
-        const summary = document.getElementById('attendanceSummaryContent'); 
-        if(summary){
-            summary.innerHTML = `<h4>${s.name} - ${s.position}</h4><div class="attendance-stats"><div class="attendance-stat"><div class="value">${presentDays}/${workDays}</div><div class="label">Jours présent(e)</div></div><div class="attendance-stat"><div class="value">${absentDays}/${workDays}</div><div class="label">Jours absent(e)</div></div><div class="attendance-stat"><div class="value">${formatFC(earnedSalary)}</div><div class="label">Salaire accumulé</div></div><div class="attendance-stat"><div class="value">${formatFC(lostSalary)}</div><div class="label">Salaire En entente</div></div><div class="attendance-stat"><div class="value">✅ Pointé</div><div class="label">${now.toLocaleTimeString()}</div></div></div>`; 
+function openQRScanner(mode) { 
+    qrScanMode = mode; 
+    const modal = document.getElementById('qrScannerModal');
+    if(modal) modal.classList.add('active'); 
+    currentCameraFacing = "environment"; 
+    
+    if (html5QrCode) {
+        if (isScannerRunning) {
+            html5QrCode.stop().catch(() => {});
         }
-        const attendanceSummaryModal = document.getElementById('attendanceSummaryModal');
-        if(attendanceSummaryModal) attendanceSummaryModal.classList.add('active');
-        showToast(`${s.name} pointé(e) avec succès !`); 
-    } else { 
-        showToast(`${s.name} déjà pointé(e) aujourd'hui.`, 'warning'); 
-    } 
-    closeModal('faceModal'); 
-    stopFaceRecognition(); 
+        html5QrCode = null;
+        isScannerRunning = false;
+    }
+    
+    startQRScanner(); 
 }
 
-function stopFaceRecognition() { 
-    if(faceStream){ faceStream.getTracks().forEach(t=>t.stop()); faceStream = null; } 
+function startQRScanner() { 
+    const qrReader = document.getElementById('qr-reader'); 
+    if(!qrReader) return;
+    
+    qrReader.innerHTML = ''; 
+    
+    if (html5QrCode) {
+        if (isScannerRunning) {
+            html5QrCode.stop().catch(() => {});
+        }
+        html5QrCode = null;
+        isScannerRunning = false;
+    }
+    
+    try {
+        html5QrCode = new Html5Qrcode("qr-reader"); 
+        const config = { fps: 10, qrbox: { width: 250, height: 250 } }; 
+        
+        html5QrCode.start(
+            { facingMode: currentCameraFacing }, 
+            config, 
+            onScanSuccess, 
+            onScanFailure
+        ).then(() => {
+            isScannerRunning = true;
+        }).catch(err => { 
+            console.log('Erreur démarrage scanner:', err);
+            html5QrCode = null;
+            isScannerRunning = false;
+        });
+    } catch(e) {
+        console.log('Erreur init scanner:', e);
+        html5QrCode = null;
+        isScannerRunning = false;
+    }
+}
+
+function closeQRScanner() { 
+    if (html5QrCode && isScannerRunning) { 
+        html5QrCode.stop()
+            .then(() => {
+                if (html5QrCode) {
+                    html5QrCode.clear().catch(() => {});
+                }
+                html5QrCode = null;
+                isScannerRunning = false;
+            })
+            .catch(() => {
+                html5QrCode = null;
+                isScannerRunning = false;
+            });
+    } else {
+        html5QrCode = null;
+        isScannerRunning = false;
+    }
+    
+    const modal = document.getElementById('qrScannerModal');
+    if(modal) modal.classList.remove('active'); 
+}
+
+function switchCamera() { 
+    currentCameraFacing = currentCameraFacing === "environment" ? "user" : "environment"; 
+    
+    if (html5QrCode && isScannerRunning) {
+        closeQRScanner();
+        setTimeout(() => {
+            startQRScanner();
+        }, 300);
+    } else {
+        startQRScanner();
+    }
+}
+
+function onScanSuccess(decodedText) { 
+    if (qrScanMode === 'add') { 
+        const addBarcode = document.getElementById('addBarcode');
+        if (addBarcode) addBarcode.value = decodedText; 
+        closeQRScanner(); 
+    } 
+    else if (qrScanMode === 'edit') { 
+        const editBarcode = document.getElementById('editBarcode');
+        if (editBarcode) editBarcode.value = decodedText; 
+        closeQRScanner(); 
+    } 
+    else if (qrScanMode === 'sale') { 
+        const item = items.find(i => i.barcode === decodedText); 
+        if (item) { 
+            scannedItem = item; 
+            closeQRScanner(); 
+            showScanActionModal(item); 
+        } else { 
+            showToast('Article non trouvé', 'error'); 
+        } 
+    } 
+}
+
+function onScanFailure(error) {}
+
+function openQRScannerForSale() { 
+    openQRScanner('sale'); 
+}
+
+function generateAndSetQR(target) {
+    const barcodeInput = document.getElementById(target === 'add' ? 'addBarcode' : 'editBarcode');
+    if(barcodeInput) {
+        const generated = Math.random().toString(36).substring(2, 15).toUpperCase();
+        barcodeInput.value = generated;
+        showToast('Code généré: ' + generated);
+    }
+}
+
+// ============================================
+// FONCTIONS DASHBOARD
+// ============================================
+function renderDashboard() { 
+    const sold = items.reduce((s,i)=>s+(i.sold||0), 0); 
+    let filteredSales = [...salesHistory];
+    if (dashboardStartDate) filteredSales = filteredSales.filter(s => s.date.split('T')[0] >= dashboardStartDate);
+    if (dashboardEndDate) filteredSales = filteredSales.filter(s => s.date.split('T')[0] <= dashboardEndDate);
+    const rev = filteredSales.reduce((s,sa)=>s+(sa.grandTotal||0), 0); 
+    const alertC = items.filter(i=>getRemainingStock(i)<=(i.type==='local'?settings.localThreshold:settings.importeThreshold)).length; 
+    const dVal = items.reduce((s,i)=>s+((i.depotStock||0)*i.price), 0); 
+    const cVal = items.reduce((s,i)=>s+((i.comptoirStock||0)*i.price), 0); 
+    let revLocal = 0, revImporte = 0, revVIP = 0; 
+    const localItems = [], importItems = []; 
+    filteredSales.forEach(sale => { sale.items.forEach(si => { const item = si.item; if (item) { const itemTotal = (item.price * si.qty) + (getVipSurcharge(item.price) * (si.vipCount || 0)); if (item.type === 'local') { revLocal += itemTotal; localItems.push({name: item.name, qty: si.qty, price: item.price, total: itemTotal}); } else if (item.type === 'importe') { revImporte += itemTotal; importItems.push({name: item.name, qty: si.qty, price: item.price, total: itemTotal}); } } }); revVIP += sale.vipSurcharge || 0; }); 
+    const totalDebts = debts.filter(d => d.status === 'pending').reduce((s,d)=>s+d.value,0);
+    const totalLosses = losses.reduce((s,l)=>s+l.value,0);
+    const totalExpenses = expenses.reduce((s,e)=>s+e.amount,0);
+    
+    window._dashboardLocalItems = localItems;
+    window._dashboardImportItems = importItems;
+    
+    const statsGrid = document.getElementById('statsGrid');
+    if(statsGrid) {
+        statsGrid.innerHTML = `<div class="stat-card clickable-stat" onclick='showDetailsModalLocal()'><i class="fas fa-flag"></i><div class="stat-value">${formatFC(revLocal)}</div><div class="stat-label">Local</div></div><div class="stat-card clickable-stat" onclick='showDetailsModalImport()'><i class="fas fa-globe"></i><div class="stat-value">${formatFC(revImporte)}</div><div class="stat-label">Import</div></div><div class="stat-card clickable-stat" onclick='showAlertsModal()'><i class="fas fa-exclamation-triangle"></i><div class="stat-value">${alertC}</div><div class="stat-label">Alertes</div></div><div class="stat-card"><i class="fas fa-money-bill"></i><div class="stat-value">${formatFC(rev)}</div><div class="stat-label">CA Total</div><div class="stat-detail">VIP: ${formatFC(revVIP)}</div></div><div class="stat-card clickable-stat" onclick='openDebtDetailsModal()'><i class="fas fa-hand-holding-usd"></i><div class="stat-value">${formatFC(totalDebts)}</div><div class="stat-label">Dettes en cours</div><div class="stat-detail">${debts.filter(d=>d.status==='pending').length} dette(s)</div></div><div class="stat-card clickable-stat" onclick='openLossesDetailsModal()'><i class="fas fa-exclamation-triangle"></i><div class="stat-value">${formatFC(totalLosses+totalExpenses)}</div><div class="stat-label">Pertes & Dépenses</div><div class="stat-detail">Pertes: ${formatFC(totalLosses)} | Dépenses: ${formatFC(totalExpenses)}</div></div><div class="stat-card"><i class="fas fa-box"></i><div class="stat-value">${sold}</div><div class="stat-label">Vendus</div></div><div class="stat-card"><i class="fas fa-warehouse"></i><div class="stat-value">${formatFC(dVal)}</div><div class="stat-label">Dépôt</div></div><div class="stat-card"><i class="fas fa-store"></i><div class="stat-value">${formatFC(cVal)}</div><div class="stat-label">Comptoir</div></div>`; 
+    }
+    filterDashboard(); 
+}
+
+function showDetailsModalLocal() {
+    const localItems = window._dashboardLocalItems || [];
+    if(!localItems || localItems.length === 0) { showToast('Aucune vente locale pour cette période'); return; }
+    let html = '<h4>Ventes Locales</h4><table style="width:100%"><thead><tr><th>Article</th><th>Qté</th><th>Prix U</th><th>Total</th></tr></thead><tbody>';
+    localItems.forEach(i => html += `<tr><td style="text-align:left">${i.name}</td><td style="text-align:center">${i.qty}</td><td style="text-align:right">${formatFC(i.price)}</td><td style="text-align:right">${formatFC(i.total)}</td>`);
+    html += '</tbody></table>';
+    const detailsModalTitle = document.getElementById('detailsModalTitle');
+    const detailsModalContent = document.getElementById('detailsModalContent');
+    if(detailsModalTitle) detailsModalTitle.textContent = 'Ventes Locales';
+    if(detailsModalContent) detailsModalContent.innerHTML = html;
+    const detailsModal = document.getElementById('detailsModal');
+    if(detailsModal) detailsModal.classList.add('active');
+}
+
+function showDetailsModalImport() {
+    const importItems = window._dashboardImportItems || [];
+    if(!importItems || importItems.length === 0) { showToast('Aucune vente importée pour cette période'); return; }
+    let html = '<h4>Ventes Importées</h4><table style="width:100%"><thead><tr><th>Article</th><th>Qté</th><th>Prix U</th><th>Total</th></tr></thead><tbody>';
+    importItems.forEach(i => html += `<tr><td style="text-align:left">${i.name}</td><td style="text-align:center">${i.qty}</td><td style="text-align:right">${formatFC(i.price)}</td><td style="text-align:right">${formatFC(i.total)}</td>`);
+    html += '</tbody></table>';
+    const detailsModalTitle = document.getElementById('detailsModalTitle');
+    const detailsModalContent = document.getElementById('detailsModalContent');
+    if(detailsModalTitle) detailsModalTitle.textContent = 'Ventes Importées';
+    if(detailsModalContent) detailsModalContent.innerHTML = html;
+    const detailsModal = document.getElementById('detailsModal');
+    if(detailsModal) detailsModal.classList.add('active');
+}
+
+function showAlertsModal() {
+    const alertItems = items.filter(i => getRemainingStock(i) <= (i.type === 'local' ? settings.localThreshold : settings.importeThreshold) && !i.hidden);
+    let html = '<h4>Articles en alerte stock bas</h4><table style="width:100%"><thead><tr><th>Article</th><th>Type</th><th>Stock Dépôt</th><th>Stock Comptoir</th><th>Total</th><th>Seuil</th></tr></thead><tbody>';
+    alertItems.forEach(i => html += `<tr><td style="text-align:left">${i.name}</td><td style="text-align:center">${i.type === 'local' ? 'Local' : 'Importé'}</td><td style="text-align:center">${i.depotStock || 0}</td><td style="text-align:center">${i.comptoirStock || 0}</td><td style="text-align:center">${getRemainingStock(i)}</td><td style="text-align:center">${i.type === 'local' ? settings.localThreshold : settings.importeThreshold}</td>`);
+    html += '</tbody></table>';
+    const detailsModalTitle = document.getElementById('detailsModalTitle');
+    const detailsModalContent = document.getElementById('detailsModalContent');
+    if(detailsModalTitle) detailsModalTitle.textContent = 'Alertes Stock Bas';
+    if(detailsModalContent) detailsModalContent.innerHTML = html;
+    const detailsModal = document.getElementById('detailsModal');
+    if(detailsModal) detailsModal.classList.add('active');
+}
+
+function openDebtDetailsModal() {
+    const pendingDebts = debts.filter(d => d.status === 'pending');
+    let html = '<h4>Dettes en cours</h4><table style="width:100%"><thead><tr><th>Client</th><th>Article</th><th>Qté</th><th>Valeur</th><th>Date limite</th><th>Serveur</th></tr></thead><tbody>';
+    pendingDebts.forEach(d => html += `<tr><td style="text-align:left">${d.clientName}</td><td style="text-align:left">${d.itemName}</td><td style="text-align:center">${d.qty}</td><td style="text-align:right">${formatFC(d.value)}</td><td style="text-align:center">${d.dueDate || '-'}</td><td style="text-align:left">${d.serverName || '-'}</td>`);
+    html += '</tbody></table>';
+    const detailsModalTitle = document.getElementById('detailsModalTitle');
+    const detailsModalContent = document.getElementById('detailsModalContent');
+    if(detailsModalTitle) detailsModalTitle.textContent = 'Dettes en cours';
+    if(detailsModalContent) detailsModalContent.innerHTML = html;
+    const detailsModal = document.getElementById('detailsModal');
+    if(detailsModal) detailsModal.classList.add('active');
+}
+
+function openLossesDetailsModal() {
+    const allLosses = [...losses.map(l=>({...l, type:'Perte'})), ...expenses.map(e=>({...e, type:'Dépense'}))].slice(-20);
+    let html = '<h4>Pertes et Dépenses (20 derniers)</h4><table style="width:100%"><thead><tr><th>Date</th><th>Type</th><th>Description</th><th>Valeur</th></tr></thead><tbody>';
+    allLosses.forEach(l => html += `<tr><td style="text-align:center">${formatDate(l.date)}</td><td style="text-align:center">${l.type}</td><td style="text-align:left">${l.itemName || l.description}</td><td style="text-align:right">${formatFC(l.value || l.amount || 0)}</td>`);
+    html += '</tbody></tr>';
+    const detailsModalTitle = document.getElementById('detailsModalTitle');
+    const detailsModalContent = document.getElementById('detailsModalContent');
+    if(detailsModalTitle) detailsModalTitle.textContent = 'Pertes et Dépenses';
+    if(detailsModalContent) detailsModalContent.innerHTML = html;
+    const detailsModal = document.getElementById('detailsModal');
+    if(detailsModal) detailsModal.classList.add('active');
+}
+
+function filterDashboard() { 
+    const s=document.getElementById('dashboardSearch')?.value.toLowerCase()||''; 
+    const f=document.getElementById('dashboardFilter')?.value||'all'; 
+    const filtered=items.filter(i=>i.name.toLowerCase().includes(s)&&(f==='all'||i.type===f)&&!i.hidden); 
+    const tbody=document.getElementById('dashboardTable'); 
+    if(tbody){
+        tbody.innerHTML=filtered.map((item,idx)=>{ const st=getStockStatus(item); return `<tr class="${item.hidden?'hidden-item':''}"><td>${idx+1}</td><td><img src="${item.photo||'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'48\' height=\'48\'%3E%3Crect width=\'48\' height=\'48\' fill=\'%232a3344\'/%3E%3Ctext x=\'24\' y=\'30\' text-anchor=\'middle\' fill=\'%238a94a6\' font-size=\'16\'%3E📦%3C/text%3E%3C/svg%3E'}" class="article-photo" onclick="showArticleDetails(${item.id})"><td><strong>${item.name}</strong>${item.hidden?' <span style="color:var(--warning);">[Masqué]</span>':''}</td><td>${item.barcode||'-'}</td><td><span class="badge-${item.type}">${item.type==='local'?'🟢':'🔵'}</span></td><td>${formatFC(item.price)}</td><td>${item.depotStock||0}</td><td>${item.comptoirStock||0}</td><td class="${st.class}">${getRemainingStock(item)}</td><td class="${st.class}">${st.text}</td>`; }).join(''); 
+    }
+}
+
+function filterDashboardByDate() {
+    dashboardStartDate = document.getElementById('dashboardStartDate')?.value;
+    dashboardEndDate = document.getElementById('dashboardEndDate')?.value;
+    renderDashboard();
+}
+
+function resetDashboardDateFilter() {
+    dashboardStartDate = null;
+    dashboardEndDate = null;
+    const startDateInput = document.getElementById('dashboardStartDate');
+    const endDateInput = document.getElementById('dashboardEndDate');
+    if(startDateInput) startDateInput.value = '';
+    if(endDateInput) endDateInput.value = '';
+    renderDashboard();
+}
+
+function exportDashboardPDF() { 
+    const doc=generateProfessionalPDF('État du Stock', ['N°','Article','Code','Type','Prix','Dépôt','Comptoir','Total'], items.filter(i=>!i.hidden).map((i,idx)=>[idx+1,i.name,i.barcode||'-',i.type,formatFC(i.price),i.depotStock||0,i.comptoirStock||0,getRemainingStock(i)])); 
+    doc.save('dashboard.pdf'); 
+    showToast('PDF exporté'); 
+}
+
+function exportInventoryPDF() { 
+    const doc=generateProfessionalPDF('Inventaire', ['N°','Article','Code','Type','Prix','Dépôt','Comptoir','Total'], items.filter(i=>!i.hidden).map((i,idx)=>[idx+1,i.name,i.barcode||'-',i.type,formatFC(i.price),i.depotStock||0,i.comptoirStock||0,getRemainingStock(i)])); 
+    doc.save('inventaire.pdf'); 
+    showToast('PDF exporté'); 
 }
 
 function generateProfessionalPDF(t,h,b){ 
@@ -2436,16 +2350,252 @@ function generateProfessionalPDF(t,h,b){
     return doc; 
 }
 
-function exportDashboardPDF() { 
-    const doc=generateProfessionalPDF('État du Stock', ['N°','Article','Code','Type','Prix','Dépôt','Comptoir','Total'], items.filter(i=>!i.hidden).map((i,idx)=>[idx+1,i.name,i.barcode||'-',i.type,formatFC(i.price),i.depotStock||0,i.comptoirStock||0,getRemainingStock(i)])); 
-    doc.save('dashboard.pdf'); 
-    showToast('PDF exporté'); 
+// ============================================
+// FONCTIONS DE SYNCHRONISATION SUPABASE
+// ============================================
+async function syncAllToSupabase() {
+    if(isSyncing) return;
+    if(!supabaseClient || !currentUser || currentUser === 'admin-local') return;
+    
+    isSyncing = true;
+    try {
+        const itemsJson = items.map(item => ({
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            purchasePrice: item.purchasePrice || 0,
+            type: item.type,
+            depotStock: item.depotStock || 0,
+            comptoirStock: item.comptoirStock || 0,
+            sold: item.sold || 0,
+            barcode: item.barcode || '',
+            expiryDate: item.expiryDate || '',
+            photo: item.photo || null,
+            hidden: item.hidden || false
+        }));
+        
+        const salesJson = salesHistory.map(sale => ({
+            id: sale.id,
+            date: sale.date,
+            grandTotal: sale.grandTotal,
+            server: sale.server,
+            paymentMethod: sale.paymentMethod,
+            items: sale.items,
+            subtotal: sale.subtotal,
+            vipSurcharge: sale.vipSurcharge
+        }));
+        
+        const serversJson = servers.map(server => ({
+            id: server.id,
+            name: server.name,
+            position: server.position,
+            startDate: server.startDate,
+            fixedSalary: server.fixedSalary,
+            dailySalary: server.dailySalary,
+            hourlySalary: server.hourlySalary,
+            matricule: server.matricule,
+            photo: server.photo,
+            present: server.present,
+            presentDays: server.presentDays
+        }));
+        
+        const movementsJson = stockMovements.map(m => ({
+            date: m.date,
+            type: m.type,
+            itemId: m.itemId,
+            itemName: m.itemName,
+            qty: m.qty,
+            value: m.value,
+            from: m.from,
+            to: m.to,
+            reason: m.reason,
+            server: m.server,
+            invoice: m.invoice
+        }));
+        
+        const lossesJson = losses.map(l => ({
+            date: l.date,
+            location: l.location,
+            itemId: l.itemId,
+            itemName: l.itemName,
+            qty: l.qty,
+            value: l.value,
+            reason: l.reason
+        }));
+        
+        const expensesJson = expenses.map(e => ({
+            date: e.date,
+            description: e.description,
+            amount: e.amount
+        }));
+        
+        const debtsJson = debts.map(d => ({
+            id: d.id,
+            type: d.type,
+            itemId: d.itemId,
+            itemName: d.itemName,
+            qty: d.qty,
+            clientName: d.clientName,
+            clientPhone: d.clientPhone,
+            reason: d.reason,
+            value: d.value,
+            refundAmount: d.refundAmount,
+            dueDate: d.dueDate,
+            status: d.status,
+            serverName: d.serverName,
+            date: d.date,
+            paidDate: d.paidDate
+        }));
+        
+        const purchasesJson = purchases.map(p => ({
+            id: p.id,
+            date: p.date,
+            supplier: p.supplier,
+            total: p.total,
+            invoice: p.invoice,
+            items: p.items
+        }));
+        
+        const suppliersJson = suppliers.map(s => ({
+            id: s.id,
+            name: s.name,
+            contact: s.contact
+        }));
+        
+        const attendanceJson = attendanceRecords.map(a => ({
+            serverId: a.serverId,
+            serverName: a.serverName,
+            type: a.type,
+            date: a.date,
+            time: a.time
+        }));
+        
+        const { data, error } = await supabaseClient.rpc('sync_complete', {
+            p_user_id: currentUser,
+            p_items: JSON.stringify(itemsJson),
+            p_sales: JSON.stringify(salesJson),
+            p_servers: JSON.stringify(serversJson),
+            p_movements: JSON.stringify(movementsJson),
+            p_losses: JSON.stringify(lossesJson),
+            p_expenses: JSON.stringify(expensesJson),
+            p_debts: JSON.stringify(debtsJson),
+            p_purchases: JSON.stringify(purchasesJson),
+            p_suppliers: JSON.stringify(suppliersJson),
+            p_attendance: JSON.stringify(attendanceJson),
+            p_tracking: JSON.stringify(trackingData),
+            p_settings: JSON.stringify(settings),
+            p_company: JSON.stringify(companyInfo)
+        });
+        
+        if (error) {
+            console.error('❌ Erreur Supabase:', error);
+        } else {
+            console.log('✅ Synchronisation réussie:', data);
+        }
+    } catch(e) {
+        console.error('❌ Sync Supabase error:', e.message);
+    } finally {
+        isSyncing = false;
+    }
 }
 
-function exportInventoryPDF() { 
-    const doc=generateProfessionalPDF('Inventaire', ['N°','Article','Code','Type','Prix','Dépôt','Comptoir','Total'], items.filter(i=>!i.hidden).map((i,idx)=>[idx+1,i.name,i.barcode||'-',i.type,formatFC(i.price),i.depotStock||0,i.comptoirStock||0,getRemainingStock(i)])); 
-    doc.save('inventaire.pdf'); 
-    showToast('PDF exporté'); 
+async function loadAllFromSupabase() { 
+    if(!supabaseClient || !currentUser || currentUser === 'admin-local') return false; 
+    try { 
+        const [itemsData, salesData, serversData, movData, lossData, expData, debtData, purData, setData, compData, suppData, attData] = await Promise.all([
+            supabaseClient.from('items').select('*').eq('user_id', currentUser), 
+            supabaseClient.from('sales').select('*').eq('user_id', currentUser), 
+            supabaseClient.from('servers').select('*').eq('user_id', currentUser), 
+            supabaseClient.from('stock_movements').select('*').eq('user_id', currentUser), 
+            supabaseClient.from('losses').select('*').eq('user_id', currentUser), 
+            supabaseClient.from('expenses').select('*').eq('user_id', currentUser), 
+            supabaseClient.from('debts').select('*').eq('user_id', currentUser), 
+            supabaseClient.from('purchases').select('*').eq('user_id', currentUser), 
+            supabaseClient.from('settings').select('*').eq('user_id', currentUser).single(), 
+            supabaseClient.from('company_info').select('*').eq('user_id', currentUser).single(), 
+            supabaseClient.from('suppliers').select('*').eq('user_id', currentUser).single(), 
+            supabaseClient.from('attendance').select('*').eq('user_id', currentUser).single()
+        ]);
+        if(itemsData.data && itemsData.data.length > 0) { 
+            items = itemsData.data.map(row => ({ id: row.id, supabaseId: row.id, name: row.name, price: row.price, purchasePrice: row.purchase_price, type: row.type, depotStock: row.depot_stock, comptoirStock: row.comptoir_stock, sold: row.sold, barcode: row.barcode, expiryDate: row.expiry_date, photo: row.photo, hidden: row.hidden })); 
+            sortItems(); 
+        } else { await initializeDefaultData(); }
+        if(salesData.data) salesHistory = salesData.data.map(s => ({...s.sale_data, supabaseId: s.id}));
+        if(serversData.data && serversData.data.length > 0) { 
+            servers = serversData.data.map(s => ({ id: s.id, supabaseId: s.id, name: s.name, position: s.position, startDate: s.start_date, fixedSalary: s.fixed_salary, dailySalary: s.daily_salary, hourlySalary: s.hourly_salary, matricule: s.matricule, photo: s.photo, present: s.present, presentDays: s.present_days })); 
+        } else { 
+            servers = defaultServers.map((s, idx) => ({...s, id: Date.now()+idx, dailySalary: Math.round(s.fixedSalary/settings.workDaysPerMonth), hourlySalary: Math.round(s.fixedSalary/settings.workDaysPerMonth/settings.workHoursPerDay), matricule: Math.random().toString(36).substring(2,14).toUpperCase(), photo: null, present: false, presentDays: 0})); 
+        }
+        if(movData.data) stockMovements = movData.data.map(m => ({ supabaseId: m.id, date: m.movement_date, type: m.movement_type, itemName: m.item_name, qty: m.qty, value: m.value, from: m.from_location, to: m.to_location, reason: m.reason, server: m.server_name }));
+        if(lossData.data) losses = lossData.data.map(l => ({ supabaseId: l.id, date: l.loss_date, location: l.location, itemName: l.item_name, qty: l.qty, value: l.value, reason: l.reason }));
+        if(expData.data) expenses = expData.data.map(e => ({ supabaseId: e.id, date: e.expense_date, description: e.description, amount: e.amount }));
+        if(debtData.data) debts = debtData.data.map(d => ({ id: d.id, supabaseId: d.id, type: d.debt_type, itemName: d.item_name, qty: d.qty, clientName: d.client_name, clientPhone: d.client_phone, reason: d.reason, value: d.value, refundAmount: d.refund_amount, dueDate: d.due_date, status: d.status, serverName: d.server_name, date: d.debt_date, paidDate: d.paid_date }));
+        if(purData.data) purchases = purData.data.map(p => ({...p.purchase_data, supabaseId: p.id}));
+        if(setData.data?.settings_data) { 
+            const sd = setData.data.settings_data; 
+            settings = {...settings, ...sd}; 
+            if(sd.trackingData) trackingData = sd.trackingData; 
+            if(sd.facePhotos) facePhotos = sd.facePhotos; 
+            if(sd.activityLogs) activityLogs = sd.activityLogs; 
+            if(sd.theme) { 
+                settings.theme = sd.theme; 
+                if(sd.theme === 'light') document.body.classList.add('light-theme'); 
+                else document.body.classList.remove('light-theme'); 
+            } 
+        }
+        if(compData.data?.company_data) companyInfo = {...companyInfo, ...compData.data.company_data};
+        if(suppData.data?.suppliers_data) suppliers = suppData.data.suppliers_data;
+        if(attData.data?.attendance_data) attendanceRecords = attData.data.attendance_data;
+        updateLogoDisplay(); 
+        updateCompanyTexts(); 
+        return true;
+    } catch(e) { console.warn('Load Supabase:', e.message); return false; }
+}
+
+// ============================================
+// FONCTIONS DE SAUVEGARDE
+// ============================================
+function saveData() { 
+    if(saveInProgress) return;
+    saveInProgress = true;
+    
+    try {
+        if(supabaseClient && currentUser && currentUser !== 'admin-local' && onlineStatus) { 
+            syncAllToSupabase(); 
+        } 
+        saveOfflineData();
+        if(settings.autoSave && currentUser) {
+            const backupKey = `mbe_autosave_${new Date().toISOString().split('T')[0]}`;
+            const backup = { items, salesHistory, servers, stockMovements, losses, expenses, debts, purchases, suppliers, attendanceRecords, trackingData, settings, companyInfo };
+            localStorage.setItem(backupKey, JSON.stringify(backup));
+            const keys = Object.keys(localStorage).filter(k => k.startsWith('mbe_autosave_')).sort();
+            while(keys.length > 7) localStorage.removeItem(keys.shift());
+        }
+    } finally {
+        setTimeout(() => { saveInProgress = false; }, 100);
+    }
+}
+
+function saveOfflineData() {
+    if (!('indexedDB' in window)) return;
+    const data = {
+        items, salesHistory, servers, settings, companyInfo, debts, stockMovements,
+        attendanceRecords, losses, expenses, purchases, trackingData, suppliers
+    };
+    const request = indexedDB.open('MesBesExtremesOffline', 1);
+    request.onupgradeneeded = function(event) {
+        const db = event.target.result;
+        if(!db.objectStoreNames.contains('offlineData')) {
+            db.createObjectStore('offlineData', { keyPath: 'key' });
+        }
+    };
+    request.onsuccess = function(event) {
+        const db = event.target.result;
+        const transaction = db.transaction(['offlineData'], 'readwrite');
+        const store = transaction.objectStore('offlineData');
+        store.put({ key: 'allData', value: data });
+        db.close();
+    };
 }
 
 function exportData() { 
@@ -2508,194 +2658,49 @@ function confirmResetAllData() {
     } 
 }
 
-function showAuthModal(t) { 
-    const modal = document.getElementById('authModal');
-    if(modal) modal.classList.add('active'); 
-    switchAuthTab(t); 
-}
-
-function switchAuthTab(t) { 
-    document.querySelectorAll('.auth-tab').forEach((b,i)=>b.classList.toggle('active', (i===0&&t==='login')||(i===1&&t==='signup'))); 
-    const loginForm = document.getElementById('loginForm');
-    const signupForm = document.getElementById('signupForm');
-    if(loginForm) loginForm.style.display=t==='login'?'block':'none';
-    if(signupForm) signupForm.style.display=t==='signup'?'block':'none';
-}
-
-function switchTab(t) { 
-    document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active')); 
-    const tab=document.getElementById('tab-'+t); 
-    if(tab) tab.classList.add('active'); 
-    document.querySelectorAll('.nav-tab').forEach(c=>c.classList.remove('active')); 
-    const btn=document.querySelector(`.nav-tab[onclick*="${t}"]`); 
-    if(btn) btn.classList.add('active'); 
-    renderAll(); 
-}
-
-function switchStockView(v) { 
-    document.querySelectorAll('.stock-view').forEach(c=>c.style.display='none'); 
-    const view=document.getElementById('stock-view-'+v); 
-    if(view) view.style.display='block'; 
-    document.querySelectorAll('#tab-stock-state .btn-outline').forEach(b=>b.classList.remove('active')); 
-    const btn=document.querySelector(`#tab-stock-state .btn-outline[onclick*="${v}"]`); 
-    if(btn) btn.classList.add('active'); 
-    if(v==='depot') renderDepotStock(); 
-    else if(v==='comptoir') renderComptoirStock(); 
-    else if(v==='movements') renderMovements(); 
-    else if(v==='losses') renderLosses(); 
-}
-
-function closeModal(id) { 
-    const modal=document.getElementById(id); 
-    if(modal) modal.classList.remove('active'); 
-}
-
-function openCompanySettings() { switchTab('settings'); }
-
-function openUserProfile() { showToast(`Profil: ${userProfile?.fullName || currentUser}`); }
-
-function updateDate() { 
-    const d=new Date(); 
-    const currentDate = document.getElementById('currentDate');
-    if(currentDate) currentDate.textContent=d.toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'}); 
-}
-
-
-let saveInProgress = false;
-
-function saveData() { 
-    if(saveInProgress) return;
-    saveInProgress = true;
-    
-    try {
-        if(supabaseClient && currentUser && currentUser !== 'admin-local' && onlineStatus) { 
-            syncAllToSupabase(); 
-        } 
-        saveOfflineData();
-    } finally {
-        setTimeout(() => { saveInProgress = false; }, 100);
+function transferLocalToCloud() {
+    const statusEl = document.getElementById('transferStatus');
+    if(!statusEl) return;
+    statusEl.textContent = '⏳ Transfert en cours...';
+    statusEl.style.color = 'var(--warning)';
+    const keys = ['mbe_web_v8', 'mbe_web_v7', 'mbe_web_v6', 'mbe_web_v5', 'mbe_web_v4', 'mbe_web_v3'];
+    let found = null;
+    for (const key of keys) {
+        const data = localStorage.getItem(key);
+        if (data) {
+            try { found = JSON.parse(data); statusEl.textContent = '✅ Données trouvées dans : ' + key; break; } catch(e) {}
+        }
+    }
+    if (!found) { statusEl.textContent = '❌ Aucune donnée locale trouvée.'; statusEl.style.color = 'var(--danger)'; return; }
+    if (found.items) items = found.items;
+    if (found.salesHistory) salesHistory = found.salesHistory;
+    if (found.servers) servers = found.servers;
+    if (found.settings) settings = found.settings;
+    if (found.companyInfo) companyInfo = found.companyInfo;
+    if (found.debts) debts = found.debts;
+    if (found.stockMovements) stockMovements = found.stockMovements;
+    if (found.attendanceRecords) attendanceRecords = found.attendanceRecords;
+    if (found.losses) losses = found.losses;
+    if (found.expenses) expenses = found.expenses;
+    if (supabaseClient && currentUser && currentUser !== 'admin-local') {
+        syncAllToSupabase().then(() => {
+            statusEl.textContent = '✅ Transfert réussi ! Vos données sont maintenant dans le cloud.';
+            statusEl.style.color = 'var(--success)';
+            sortItems();
+            renderAll();
+        }).catch(() => {
+            statusEl.textContent = '❌ Erreur de connexion au cloud. Vérifiez que vous êtes connecté avec un compte Supabase.';
+            statusEl.style.color = 'var(--danger)';
+        });
+    } else {
+        statusEl.textContent = '❌ Connectez-vous d\'abord avec un compte Supabase.';
+        statusEl.style.color = 'var(--danger)';
     }
 }
 
-function saveOfflineData() {
-    if (!('indexedDB' in window)) return;
-    const data = {
-        items, salesHistory, servers, settings, companyInfo, debts, stockMovements,
-        attendanceRecords, losses, expenses, purchases, trackingData, suppliers
-    };
-    const request = indexedDB.open('MesBesExtremesOffline', 1);
-    request.onsuccess = function(event) {
-        const db = event.target.result;
-        const transaction = db.transaction(['offlineData'], 'readwrite');
-        const store = transaction.objectStore('offlineData');
-        store.put({ key: 'allData', value: data });
-        db.close();
-    };
-}
-
-let isSyncing = false; // À ajouter AVANT la fonction (dans la zone des variables globales)
-
-async function syncAllToSupabase() {
-    if(isSyncing) return;
-    if(!supabaseClient || !currentUser || currentUser === 'admin-local') return;
-    
-    isSyncing = true;
-    try {
-        const promises = [];
-        for(const item of items) { 
-            const data = { user_id: currentUser, name: item.name, price: item.price, purchase_price: item.purchasePrice || 0, type: item.type, depot_stock: item.depotStock || 0, comptoir_stock: item.comptoirStock || 0, sold: item.sold || 0, barcode: item.barcode || '', expiry_date: item.expiryDate || null, photo: item.photo || null, hidden: item.hidden || false }; 
-            if(item.supabaseId) { 
-                promises.push(supabaseClient.from('items').update(data).eq('id', item.supabaseId)); 
-            } else { 
-                promises.push(supabaseClient.from('items').insert(data).select('id').single().then(({data:inserted})=>{if(inserted)item.supabaseId=inserted.id;})); 
-            } 
-        }
-        for(const sale of salesHistory) { 
-            const data = { user_id: currentUser, sale_data: sale, sale_date: sale.date || '', grand_total: sale.grandTotal || 0, server_name: sale.server?.name || '', payment_method: sale.paymentMethod || 'cash' }; 
-            if(sale.supabaseId) { 
-                promises.push(supabaseClient.from('sales').update(data).eq('id', sale.supabaseId)); 
-            } else { 
-                promises.push(supabaseClient.from('sales').insert(data).select('id').single().then(({data:inserted})=>{if(inserted)sale.supabaseId=inserted.id;})); 
-            } 
-        }
-        for(const server of servers) { 
-            const data = { user_id: currentUser, name: server.name, position: server.position || 'Serveur', start_date: server.startDate || '', fixed_salary: server.fixedSalary || 0, daily_salary: server.dailySalary || 0, hourly_salary: server.hourlySalary || 0, matricule: server.matricule || '', photo: server.photo || null, present: server.present || false, present_days: server.presentDays || 0 }; 
-            if(server.supabaseId) { 
-                promises.push(supabaseClient.from('servers').update(data).eq('id', server.supabaseId)); 
-            } else { 
-                promises.push(supabaseClient.from('servers').insert(data).select('id').single().then(({data:inserted})=>{if(inserted)server.supabaseId=inserted.id;})); 
-            } 
-        }
-        await Promise.all(promises);
-    } catch(e) { console.warn('Sync Supabase:', e.message); }
-    finally {
-        isSyncing = false;
-    }
-}
-
-
-
-async function syncSettingsToSupabase() { if(!supabaseClient || !currentUser || currentUser === 'admin-local') return; const allSettings = {...settings, trackingData, facePhotos, activityLogs, theme: settings.theme}; try { const { data: existing } = await supabaseClient.from('settings').select('*').eq('user_id', currentUser).single(); if(existing) { await supabaseClient.from('settings').update({ settings_data: allSettings }).eq('user_id', currentUser); } else { await supabaseClient.from('settings').insert({ user_id: currentUser, settings_data: allSettings }); } } catch(e) {} }
-
-async function syncCompanyInfoToSupabase() { if(!supabaseClient || !currentUser || currentUser === 'admin-local') return; try { const { data: existing } = await supabaseClient.from('company_info').select('*').eq('user_id', currentUser).single(); if(existing) { await supabaseClient.from('company_info').update({ company_data: companyInfo }).eq('user_id', currentUser); } else { await supabaseClient.from('company_info').insert({ user_id: currentUser, company_data: companyInfo }); } } catch(e) {} }
-
-async function syncSuppliersToSupabase() { if(!supabaseClient || !currentUser || currentUser === 'admin-local') return; try { const { data: existing } = await supabaseClient.from('suppliers').select('*').eq('user_id', currentUser).single(); if(existing) { await supabaseClient.from('suppliers').update({ suppliers_data: suppliers }).eq('user_id', currentUser); } else { await supabaseClient.from('suppliers').insert({ user_id: currentUser, suppliers_data: suppliers }); } } catch(e) {} }
-
-async function syncAttendanceToSupabase() { if(!supabaseClient || !currentUser || currentUser === 'admin-local') return; try { const { data: existing } = await supabaseClient.from('attendance').select('*').eq('user_id', currentUser).single(); if(existing) { await supabaseClient.from('attendance').update({ attendance_data: attendanceRecords }).eq('user_id', currentUser); } else { await supabaseClient.from('attendance').insert({ user_id: currentUser, attendance_data: attendanceRecords }); } } catch(e) {} }
-
-async function loadAllFromSupabase() { 
-    if(!supabaseClient || !currentUser || currentUser === 'admin-local') return false; 
-    try { 
-        const [itemsData, salesData, serversData, movData, lossData, expData, debtData, purData, setData, compData, suppData, attData] = await Promise.all([
-            supabaseClient.from('items').select('*').eq('user_id', currentUser), 
-            supabaseClient.from('sales').select('*').eq('user_id', currentUser), 
-            supabaseClient.from('servers').select('*').eq('user_id', currentUser), 
-            supabaseClient.from('stock_movements').select('*').eq('user_id', currentUser), 
-            supabaseClient.from('losses').select('*').eq('user_id', currentUser), 
-            supabaseClient.from('expenses').select('*').eq('user_id', currentUser), 
-            supabaseClient.from('debts').select('*').eq('user_id', currentUser), 
-            supabaseClient.from('purchases').select('*').eq('user_id', currentUser), 
-            supabaseClient.from('settings').select('*').eq('user_id', currentUser).single(), 
-            supabaseClient.from('company_info').select('*').eq('user_id', currentUser).single(), 
-            supabaseClient.from('suppliers').select('*').eq('user_id', currentUser).single(), 
-            supabaseClient.from('attendance').select('*').eq('user_id', currentUser).single()
-        ]);
-        if(itemsData.data && itemsData.data.length > 0) { 
-            items = itemsData.data.map(row => ({ id: row.id, supabaseId: row.id, name: row.name, price: row.price, purchasePrice: row.purchase_price, type: row.type, depotStock: row.depot_stock, comptoirStock: row.comptoir_stock, sold: row.sold, barcode: row.barcode, expiryDate: row.expiry_date, photo: row.photo, hidden: row.hidden })); 
-            sortItems(); 
-        } else { await initializeDefaultData(); }
-        if(salesData.data) salesHistory = salesData.data.map(s => ({...s.sale_data, supabaseId: s.id}));
-        if(serversData.data && serversData.data.length > 0) { 
-            servers = serversData.data.map(s => ({ id: s.id, supabaseId: s.id, name: s.name, position: s.position, startDate: s.start_date, fixedSalary: s.fixed_salary, dailySalary: s.daily_salary, hourlySalary: s.hourly_salary, matricule: s.matricule, photo: s.photo, present: s.present, presentDays: s.present_days })); 
-        } else { 
-            servers = defaultServers.map((s, idx) => ({...s, id: Date.now()+idx, dailySalary: Math.round(s.fixedSalary/settings.workDaysPerMonth), hourlySalary: Math.round(s.fixedSalary/settings.workDaysPerMonth/settings.workHoursPerDay), matricule: Math.random().toString(36).substring(2,14).toUpperCase(), photo: null, present: false, presentDays: 0})); 
-        }
-        if(movData.data) stockMovements = movData.data.map(m => ({ supabaseId: m.id, date: m.movement_date, type: m.movement_type, itemName: m.item_name, qty: m.qty, value: m.value, from: m.from_location, to: m.to_location, reason: m.reason, server: m.server_name }));
-        if(lossData.data) losses = lossData.data.map(l => ({ supabaseId: l.id, date: l.loss_date, location: l.location, itemName: l.item_name, qty: l.qty, value: l.value, reason: l.reason }));
-        if(expData.data) expenses = expData.data.map(e => ({ supabaseId: e.id, date: e.expense_date, description: e.description, amount: e.amount }));
-        if(debtData.data) debts = debtData.data.map(d => ({ id: d.id, supabaseId: d.id, type: d.debt_type, itemName: d.item_name, qty: d.qty, clientName: d.client_name, clientPhone: d.client_phone, reason: d.reason, value: d.value, refundAmount: d.refund_amount, dueDate: d.due_date, status: d.status, serverName: d.server_name, date: d.debt_date, paidDate: d.paid_date }));
-        if(purData.data) purchases = purData.data.map(p => ({...p.purchase_data, supabaseId: p.id}));
-        if(setData.data?.settings_data) { 
-            const sd = setData.data.settings_data; 
-            settings = {...settings, ...sd}; 
-            if(sd.trackingData) trackingData = sd.trackingData; 
-            if(sd.facePhotos) facePhotos = sd.facePhotos; 
-            if(sd.activityLogs) activityLogs = sd.activityLogs; 
-            if(sd.theme) { 
-                settings.theme = sd.theme; 
-                if(sd.theme === 'light') document.body.classList.add('light-theme'); 
-                else document.body.classList.remove('light-theme'); 
-            } 
-        }
-        if(compData.data?.company_data) companyInfo = {...companyInfo, ...compData.data.company_data};
-        if(suppData.data?.suppliers_data) suppliers = suppData.data.suppliers_data;
-        if(attData.data?.attendance_data) attendanceRecords = attData.data.attendance_data;
-        updateLogoDisplay(); 
-        updateCompanyTexts(); 
-        return true;
-    } catch(e) { console.warn('Load Supabase:', e.message); return false; }
-}
-
+// ============================================
+// FONCTIONS ENTREPRISE ET PARAMÈTRES
+// ============================================
 function updateLogoDisplay() { 
     const p=document.getElementById('logoPreview'); 
     const h=document.getElementById('headerLogoImg'); 
@@ -2839,81 +2844,127 @@ async function initializeDefaultData() {
     items = fullItemsList.map((item, idx) => ({...item, id: Date.now()+idx+1, purchasePrice: Math.round(item.price*0.6), sold: 0, photo: null, expiryDate: '', hidden: false})); 
     sortItems(); 
     servers = defaultServers.map((s, idx) => ({...s, id: Date.now()+idx+100, dailySalary: Math.round(s.fixedSalary/settings.workDaysPerMonth), hourlySalary: Math.round(s.fixedSalary/settings.workDaysPerMonth/settings.workHoursPerDay), matricule: Math.random().toString(36).substring(2,14).toUpperCase(), photo: null, present: false, presentDays: 0})); 
+    initTrackingData();
 }
 
+// ============================================
+// FONCTIONS D'AUTHENTIFICATION
+// ============================================
 async function handleLogin() { 
     const u = document.getElementById('loginUsername')?.value.trim(); 
     const p = document.getElementById('loginPassword')?.value; 
-    if (!u || !p) { showToast('Veuillez remplir tous les champs', 'error'); return; } 
-    if (supabaseClient) { 
+    
+    if (!u || !p) { 
+        showToast('Veuillez remplir tous les champs', 'error'); 
+        return; 
+    } 
+    
+    let supabaseAvailable = false;
+    if (supabaseClient) {
+        try {
+            const testConnection = await Promise.race([
+                supabaseClient.from('items').select('count', { count: 'exact', head: true }),
+                new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 5000))
+            ]);
+            supabaseAvailable = true;
+            console.log('✅ Supabase disponible');
+        } catch(e) {
+            console.warn('⚠️ Supabase indisponible:', e.message);
+            supabaseClient = null;
+        }
+    }
+    
+    if (supabaseAvailable && supabaseClient) { 
         try { 
-            let email = u.includes('@') ? u : `${u}@mesbesextremes.cd`; 
-            let { data, error } = await supabaseClient.auth.signInWithPassword({ email, password: p }); 
+            let email = u.includes('@') ? u : `${u}@mesbesextremes.cd`;
+            
+            const { data, error } = await supabaseClient.auth.signInWithPassword({ 
+                email: email, 
+                password: p 
+            }); 
+            
             if (!error && data.user) { 
                 currentUser = data.user.id; 
-                userProfile = { fullName: data.user.user_metadata?.full_name || u, role: 'admin', email: data.user.email }; 
+                userProfile = { 
+                    fullName: data.user.user_metadata?.full_name || u, 
+                    role: 'admin', 
+                    email: data.user.email 
+                }; 
                 await onLoginSuccess(); 
                 return; 
-            } 
-        } catch (e) {} 
+            } else if (error) {
+                console.log('Erreur Supabase:', error.message);
+            }
+        } catch (e) { 
+            console.log('Exception Supabase:', e.message);
+        }
     } 
-    if (u === 'admin' && p === 'admin') { 
-        if(supabaseClient) { 
-            try { 
-                let { data, error } = await supabaseClient.auth.signInWithPassword({ email: TEAM_EMAIL, password: TEAM_PASSWORD }); 
-                if (!error && data.user) { 
-                    currentUser = data.user.id; 
-                    userProfile = { fullName: 'Équipe', role: 'admin', email: TEAM_EMAIL }; 
-                    await onLoginSuccess(); 
-                    return; 
-                } 
-                let { data: signUpData } = await supabaseClient.auth.signUp({ email: TEAM_EMAIL, password: TEAM_PASSWORD, options: { data: { full_name: 'Équipe' } } }); 
-                if (signUpData.user) { 
-                    currentUser = signUpData.user.id; 
-                    userProfile = { fullName: 'Équipe', role: 'admin', email: TEAM_EMAIL }; 
-                    await initializeDefaultData(); 
-                    await syncAllToSupabase(); 
-                    await onLoginSuccess(); 
-                    return; 
-                } 
-            } catch(e) {} 
-        } 
+    
+    if (u === 'admin@mesbesextremes.cd' && p === 'Admin123!' || 
+        u === 'admin' && p === 'admin') { 
         currentUser = 'admin-local'; 
-        userProfile = { fullName: 'Administrateur', role: 'admin', email: 'admin@mesbesextremes.cd' }; 
+        userProfile = { 
+            fullName: 'Administrateur (Hors ligne)', 
+            role: 'admin', 
+            email: 'admin@mesbesextremes.cd' 
+        }; 
         await onLoginSuccessFallback(); 
-    } else { 
-        showToast('Identifiants incorrects', 'error'); 
-    } 
+        showToast('⚠️ Mode hors ligne - Données locales uniquement', 'warning');
+        return;
+    }
+    
+    showToast('Identifiants incorrects', 'error'); 
 }
 
 async function onLoginSuccess() { 
     const authModal = document.getElementById('authModal');
     const landingPage = document.getElementById('landingPage');
     const appContainer = document.getElementById('appContainer');
+    
     if(authModal) authModal.classList.remove('active'); 
     if(landingPage) landingPage.style.display = 'none'; 
     if(appContainer) appContainer.classList.add('authenticated'); 
+    
     const loaded = await loadAllFromSupabase(); 
-    if(!loaded || items.length === 0) { await initializeDefaultData(); await syncAllToSupabase(); } 
+    if(!loaded || items.length === 0) { 
+        await initializeDefaultData(); 
+        await syncAllToSupabase(); 
+    } 
+    
     updateUserInterface(); 
     renderAll(); 
-    showToast('Connecté (cloud ☁️) ✅'); 
+    showToast('Connecté au cloud ☁️ ✅'); 
     logActivity('Connexion', userProfile.email); 
-    localStorage.setItem('mbe_session', JSON.stringify({ email: userProfile.email, password: TEAM_PASSWORD, userId: currentUser, timestamp: Date.now() })); 
+    
+    localStorage.setItem('mbe_session', JSON.stringify({ 
+        email: userProfile.email, 
+        password: 'Admin123!',
+        userId: currentUser, 
+        timestamp: Date.now(),
+        isCloud: true
+    })); 
 }
 
 async function onLoginSuccessFallback() { 
     const authModal = document.getElementById('authModal');
     const landingPage = document.getElementById('landingPage');
     const appContainer = document.getElementById('appContainer');
+    
     if(authModal) authModal.classList.remove('active'); 
     if(landingPage) landingPage.style.display = 'none'; 
     if(appContainer) appContainer.classList.add('authenticated'); 
+    
     await initializeDefaultData(); 
     updateUserInterface(); 
     renderAll(); 
-    showToast('Connecté (local) ⚠️'); 
-    localStorage.setItem('mbe_session', JSON.stringify({ local: true, userId: 'admin-local', timestamp: Date.now() })); 
+    showToast('Connecté (mode local) ⚠️'); 
+    
+    localStorage.setItem('mbe_session', JSON.stringify({ 
+        email: 'admin@mesbesextremes.cd',
+        local: true, 
+        userId: 'admin-local', 
+        timestamp: Date.now() 
+    })); 
 }
 
 async function handleSignup() { 
@@ -2955,131 +3006,235 @@ function logout() {
 async function restoreSession() {
     const session = localStorage.getItem('mbe_session');
     if (!session) return false;
+    
     try {
         const sessionData = JSON.parse(session);
+        
         if (sessionData.timestamp && (Date.now() - sessionData.timestamp) > 30 * 24 * 60 * 60 * 1000) {
             localStorage.removeItem('mbe_session');
             return false;
         }
+        
         if (sessionData.email && sessionData.password && supabaseClient) {
             try {
-                const { data, error } = await supabaseClient.auth.signInWithPassword({ email: sessionData.email, password: sessionData.password });
+                const { data, error } = await supabaseClient.auth.signInWithPassword({ 
+                    email: sessionData.email, 
+                    password: sessionData.password 
+                });
+                
                 if (data?.user) {
                     currentUser = data.user.id;
-                    userProfile = { fullName: data.user.user_metadata?.full_name || sessionData.email.split('@')[0], role: 'admin', email: data.user.email };
+                    userProfile = { 
+                        fullName: data.user.user_metadata?.full_name || sessionData.email.split('@')[0], 
+                        role: 'admin', 
+                        email: data.user.email 
+                    };
+                    
                     const landingPage = document.getElementById('landingPage');
                     const appContainer = document.getElementById('appContainer');
                     if(landingPage) landingPage.style.display = 'none';
                     if(appContainer) appContainer.classList.add('authenticated');
+                    
                     updateUserInterface();
+                    
                     const loaded = await loadAllFromSupabase();
-                    if(!loaded || items.length === 0) { await initializeDefaultData(); await syncAllToSupabase(); }
+                    if(!loaded || items.length === 0) { 
+                        await initializeDefaultData(); 
+                        await syncAllToSupabase(); 
+                    }
+                    
                     updateCompanyFormFields();
                     updateServerSelects();
-                    updateServerFilterSelect();
+                    if(typeof updateServerFilterSelect === 'function') updateServerFilterSelect();
                     renderSuppliersList();
                     loadUsers();
-                    startAutoSync();
                     renderAll();
+                    
                     return true;
                 }
-            } catch(e) { console.log('Erreur reconnexion Supabase:', e.message); }
-        }
-        if (sessionData.local) {
-            currentUser = 'admin-local';
-            userProfile = { fullName: 'Administrateur', role: 'admin', email: 'admin@mesbesextremes.cd' };
-            if(supabaseClient) {
-                try {
-                    const { data, error } = await supabaseClient.auth.signInWithPassword({ email: TEAM_EMAIL, password: TEAM_PASSWORD });
-                    if (!error && data.user) {
-                        currentUser = data.user.id;
-                        userProfile = { fullName: 'Équipe', role: 'admin', email: TEAM_EMAIL };
-                        localStorage.setItem('mbe_session', JSON.stringify({ email: TEAM_EMAIL, password: TEAM_PASSWORD, userId: currentUser, timestamp: Date.now() }));
-                        const loaded = await loadAllFromSupabase();
-                        if(!loaded || items.length === 0) { await initializeDefaultData(); await syncAllToSupabase(); }
-                    } else {
-                        const { data: signUpData } = await supabaseClient.auth.signUp({ email: TEAM_EMAIL, password: TEAM_PASSWORD, options: { data: { full_name: 'Équipe' } } });
-                        if (signUpData.user) {
-                            currentUser = signUpData.user.id;
-                            userProfile = { fullName: 'Équipe', role: 'admin', email: TEAM_EMAIL };
-                            localStorage.setItem('mbe_session', JSON.stringify({ email: TEAM_EMAIL, password: TEAM_PASSWORD, userId: currentUser, timestamp: Date.now() }));
-                            await initializeDefaultData(); 
-                            await syncAllToSupabase();
-                        }
-                    }
-                } catch(e) {}
+            } catch(e) { 
+                console.log('Erreur reconnexion Supabase:', e.message); 
             }
+        }
+        
+        if (sessionData.email === 'admin@mesbesextremes.cd' || sessionData.local) {
+            currentUser = 'admin-local';
+            userProfile = { 
+                fullName: 'Administrateur', 
+                role: 'admin', 
+                email: 'admin@mesbesextremes.cd' 
+            };
+            
             const landingPage = document.getElementById('landingPage');
             const appContainer = document.getElementById('appContainer');
             if(landingPage) landingPage.style.display = 'none';
             if(appContainer) appContainer.classList.add('authenticated');
+            
             updateUserInterface();
-            if(currentUser && currentUser !== 'admin-local') {
-                const loaded = await loadAllFromSupabase();
-                if(!loaded || items.length === 0) { await initializeDefaultData(); await syncAllToSupabase(); }
-            } else {
-                await initializeDefaultData();
-            }
+            await initializeDefaultData();
+            
             updateCompanyFormFields();
             updateServerSelects();
-            updateServerFilterSelect();
+            if(typeof updateServerFilterSelect === 'function') updateServerFilterSelect();
             renderSuppliersList();
             loadUsers();
-            if(currentUser && currentUser !== 'admin-local') startAutoSync();
             renderAll();
+            
             return true;
         }
-    } catch(e) { console.log('Erreur session:', e.message); }
+    } catch(e) { 
+        console.log('Erreur session:', e.message); 
+    }
+    
     localStorage.removeItem('mbe_session');
     return false;
 }
 
-function transferLocalToCloud() {
-    const statusEl = document.getElementById('transferStatus');
-    if(!statusEl) return;
-    statusEl.textContent = '⏳ Transfert en cours...';
-    statusEl.style.color = 'var(--warning)';
-    const keys = ['mbe_web_v8', 'mbe_web_v7', 'mbe_web_v6', 'mbe_web_v5', 'mbe_web_v4', 'mbe_web_v3'];
-    let found = null;
-    for (const key of keys) {
-        const data = localStorage.getItem(key);
-        if (data) {
-            try { found = JSON.parse(data); statusEl.textContent = '✅ Données trouvées dans : ' + key; break; } catch(e) {}
+// ============================================
+// FONCTIONS RECONNAISSANCE FACIALE
+// ============================================
+function findServerByName(input) { 
+    const search=input.toLowerCase().trim(); 
+    return servers.find(s=>{ 
+        const full=s.name.toLowerCase(); 
+        const first=s.name.split(' ')[0].toLowerCase(); 
+        const last=s.name.split(' ').slice(-1)[0].toLowerCase(); 
+        return full===search||full.includes(search)||search.includes(first)||search.includes(last)||full.startsWith(search)||full.endsWith(search); 
+    }); 
+}
+
+async function openFaceRecognitionModal() { 
+    const modal = document.getElementById('faceModal');
+    if(modal) modal.classList.add('active'); 
+    faceCameraFacing = "user"; 
+    try { 
+        faceStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: faceCameraFacing } }); 
+        const video = document.getElementById('faceVideo'); 
+        if(video) video.srcObject = faceStream; 
+        if(!faceApiLoaded){ 
+            await faceapi.nets.tinyFaceDetector.loadFromUri('https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/weights'); 
+            await faceapi.nets.faceLandmark68Net.loadFromUri('https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/weights'); 
+            await faceapi.nets.faceRecognitionNet.loadFromUri('https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/weights'); 
+            faceApiLoaded = true; 
+        } 
+    } catch(e){ showToast('Erreur caméra: ' + e.message, 'error'); } 
+}
+
+async function switchFaceCamera() { 
+    if(faceStream){ faceStream.getTracks().forEach(t=>t.stop()); faceStream = null; } 
+    faceCameraFacing = faceCameraFacing === "user" ? "environment" : "user"; 
+    try { 
+        faceStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: faceCameraFacing } }); 
+        const video = document.getElementById('faceVideo'); 
+        if(video) video.srcObject = faceStream; 
+    } catch(e){ showToast('Erreur caméra: ' + e.message, 'error'); } 
+}
+
+async function markAttendance() { 
+    const video = document.getElementById('faceVideo'); 
+    if(!video || !faceStream) { showToast('Caméra non disponible'); return; } 
+    const n = prompt('Entrez votre nom pour le pointage:'); 
+    if(!n) return; 
+    const s = findServerByName(n); 
+    if(!s){ showToast('Serveur non trouvé. Contactez l\'administrateur.', 'error'); return; } 
+    const now = new Date(); 
+    const today = now.toISOString().split('T')[0]; 
+    const alreadyCheckedToday = attendanceRecords.some(r => r.serverId === s.id && r.date === today && r.type === 'in'); 
+    if(!alreadyCheckedToday) { 
+        s.present = true; 
+        s.presentDays = (s.presentDays || 0) + 1; 
+        s.checkInTime = now.toISOString(); 
+        attendanceRecords.push({ serverId: s.id, serverName: s.name, type: 'in', date: today, time: now.toISOString() }); 
+        saveData(); 
+        const workDays = settings.workDaysPerMonth; 
+        const presentDays = s.presentDays || 0; 
+        const absentDays = workDays - presentDays; 
+        const monthlySalary = (s.dailySalary || 0) * workDays; 
+        const earnedSalary = (s.dailySalary || 0) * presentDays; 
+        const lostSalary = monthlySalary - earnedSalary; 
+        const summary = document.getElementById('attendanceSummaryContent'); 
+        if(summary){
+            summary.innerHTML = `<h4>${s.name} - ${s.position}</h4><div class="attendance-stats"><div class="attendance-stat"><div class="value">${presentDays}/${workDays}</div><div class="label">Jours présent(e)</div></div><div class="attendance-stat"><div class="value">${absentDays}/${workDays}</div><div class="label">Jours absent(e)</div></div><div class="attendance-stat"><div class="value">${formatFC(earnedSalary)}</div><div class="label">Salaire accumulé</div></div><div class="attendance-stat"><div class="value">${formatFC(lostSalary)}</div><div class="label">Salaire En entente</div></div><div class="attendance-stat"><div class="value">✅ Pointé</div><div class="label">${now.toLocaleTimeString()}</div></div></div>`; 
         }
-    }
-    if (!found) { statusEl.textContent = '❌ Aucune donnée locale trouvée.'; statusEl.style.color = 'var(--danger)'; return; }
-    if (found.items) items = found.items;
-    if (found.salesHistory) salesHistory = found.salesHistory;
-    if (found.servers) servers = found.servers;
-    if (found.settings) settings = found.settings;
-    if (found.companyInfo) companyInfo = found.companyInfo;
-    if (found.debts) debts = found.debts;
-    if (found.stockMovements) stockMovements = found.stockMovements;
-    if (found.attendanceRecords) attendanceRecords = found.attendanceRecords;
-    if (found.losses) losses = found.losses;
-    if (found.expenses) expenses = found.expenses;
-    if (supabaseClient && currentUser && currentUser !== 'admin-local') {
-        syncAllToSupabase().then(() => {
-            statusEl.textContent = '✅ Transfert réussi ! Vos données sont maintenant dans le cloud.';
-            statusEl.style.color = 'var(--success)';
-            sortItems();
-            renderAll();
-        }).catch(() => {
-            statusEl.textContent = '❌ Erreur de connexion au cloud. Vérifiez que vous êtes connecté avec un compte Supabase.';
-            statusEl.style.color = 'var(--danger)';
-        });
-    } else {
-        statusEl.textContent = '❌ Connectez-vous d\'abord avec un compte Supabase.';
-        statusEl.style.color = 'var(--danger)';
-    }
+        const attendanceSummaryModal = document.getElementById('attendanceSummaryModal');
+        if(attendanceSummaryModal) attendanceSummaryModal.classList.add('active');
+        showToast(`${s.name} pointé(e) avec succès !`); 
+    } else { 
+        showToast(`${s.name} déjà pointé(e) aujourd'hui.`, 'warning'); 
+    } 
+    closeModal('faceModal'); 
+    stopFaceRecognition(); 
 }
 
-function startAutoSync() { 
-    setInterval(() => { 
-        if(supabaseClient && currentUser && currentUser !== 'admin-local' && onlineStatus) syncAllToSupabase(); 
-    }, 5000); 
+function stopFaceRecognition() { 
+    if(faceStream){ faceStream.getTracks().forEach(t=>t.stop()); faceStream = null; } 
 }
 
+// ============================================
+// FONCTIONS DE RENDU GLOBAL
+// ============================================
+function renderAll() { 
+    renderDashboard(); 
+    renderSaleItems(); 
+    renderInventory(); 
+    renderDepotStock(); 
+    renderComptoirStock(); 
+    renderMovements(); 
+    renderTracking(); 
+    renderHistory(); 
+    renderAlerts(); 
+    renderServerStatsByDate(); 
+    updateAlertBadge(); 
+    updateTransferSelects(); 
+    updateServerSelects(); 
+    updateHistoryFilters(); 
+    updateDebtFilters(); 
+    updateCartDateInput(); 
+    loadUsers(); 
+    renderSuppliersList(); 
+}
+
+function switchTab(t) { 
+    document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active')); 
+    const tab=document.getElementById('tab-'+t); 
+    if(tab) tab.classList.add('active'); 
+    document.querySelectorAll('.nav-tab').forEach(c=>c.classList.remove('active')); 
+    const btn=document.querySelector(`.nav-tab[onclick*="${t}"]`); 
+    if(btn) btn.classList.add('active'); 
+    renderAll(); 
+}
+
+function switchStockView(v) { 
+    document.querySelectorAll('.stock-view').forEach(c=>c.style.display='none'); 
+    const view=document.getElementById('stock-view-'+v); 
+    if(view) view.style.display='block'; 
+    document.querySelectorAll('#tab-stock-state .btn-outline').forEach(b=>b.classList.remove('active')); 
+    const btn=document.querySelector(`#tab-stock-state .btn-outline[onclick*="${v}"]`); 
+    if(btn) btn.classList.add('active'); 
+    if(v==='depot') renderDepotStock(); 
+    else if(v==='comptoir') renderComptoirStock(); 
+    else if(v==='movements') renderMovements(); 
+    else if(v==='losses') renderLosses(); 
+}
+
+function closeModal(id) { 
+    const modal=document.getElementById(id); 
+    if(modal) modal.classList.remove('active'); 
+}
+
+function openCompanySettings() { switchTab('settings'); }
+
+function openUserProfile() { showToast(`Profil: ${userProfile?.fullName || currentUser}`); }
+
+function updateDate() { 
+    const d=new Date(); 
+    const currentDate = document.getElementById('currentDate');
+    if(currentDate) currentDate.textContent=d.toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'}); 
+}
+
+// ============================================
+// INITIALISATION
+// ============================================
 async function init() {
     initSupabase();
     const savedTheme = localStorage.getItem('mbe_theme');
@@ -3151,11 +3306,11 @@ async function init() {
             }
         }
     });
+    
+    document.addEventListener('click', function(e) { if(e.target.classList.contains('modal-overlay')) { e.target.classList.remove('active'); } });
 }
 
-document.addEventListener('click', function(e) { if(e.target.classList.contains('modal-overlay')) { e.target.classList.remove('active'); } });
 init();
 </script>
 </body>
 </html>
-
